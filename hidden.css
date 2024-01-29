@@ -1,0 +1,578 @@
+
+
+
+
+/**** Media query for max-width of 680px****/
+@media (max-width: 680px) {
+   header #header-nav {
+    padding: 0.2rem 4% 0 4%;
+    background-color: #fff !important;
+  }
+  header #header-nav .first-nav{
+    border-bottom: 2px solid #fb7777;
+  }
+
+  header nav .first-nav .navlogo a #logo{
+    height: 65px !important;
+  }
+
+  header nav .first-nav .navright ul{
+    display: none;
+  }
+  header nav .first-nav .navright a.fa{
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+
+
+  /**Header showcase starts here and contains the slide and necessary texts**/
+  .header-showcase {
+    position: relative;
+    width: 100%;
+    height: 330px;
+  }
+
+  .header-showcase .slide-control {
+    display: absolute;
+    color: #fff;
+    z-index: 12;
+  }
+
+  .header-showcase .prev, .header-showcase .next {
+    top: 50%;
+    margin-top: 0px !important;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    border-radius: 0 3px 3px 0;
+    opacity: 1;
+    background:#fb7777 !important;
+  }
+
+
+  .header-showcase .prev {
+    padding :0.5rem 0.7rem 0.5rem 0.7rem;
+  }
+
+  .header-showcase .next {
+    right: 0;
+    padding:0.5rem 0.7rem 0.5rem 0.7rem;
+  }
+
+  .header-showcase .dots {
+    opacity: 1;
+  }
+
+  .header-showcase .slide1 {
+    background-image: url(./images/mountain.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: none !important;
+  }
+  .header-showcase .slide2 {
+    background-image: url(./images/worship7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: none !important;
+
+  }
+  .header-showcase .slide3 {
+    background-image: url(./images/hope1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: none !important;
+  }
+
+  /*** The are the styles for the slides of the home carousel */
+  .mySlides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    display: none;
+  }
+
+  /*carousel dot*/
+  .dot {
+    height: 4px;
+    width: 4px;
+    margin: 0 0.5rem;
+  }
+
+  /*active carousel dot*/
+  .active {
+    height: 5px !important;
+    width: 5px !important;
+  }
+
+  /**Styles for the first slide in the carousel starts**/
+  .slide1{
+    position: relative;
+  }
+
+  .slide1 .header-showcase-text{
+    width: max-content;
+    height: max-content;
+    margin: 72px 0 0 10%;
+  }
+
+  .slide1 .header-showcase-text h2{
+    font-weight:600;
+    font-size: 43px;
+    line-height: 48px;
+  }
+
+  .slide1 .header-showcase-text #underlined::after{
+    height: 3px;
+  }
+
+  .slide1 .header-showcase-text .bible-verse{
+    margin-top: 8px;
+  }
+
+  .slide1 .header-showcase-text .bible-verse h3{
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 6px;
+  }
+
+  .slide1 .header-showcase-text .join-us{
+    margin-top:8px;
+  }
+
+  .slide1 .header-showcase-text .join-us h3{
+    font-weight: 400;
+    font-size: 18px !important;
+    border-bottom: 1px solid #fff !important;
+  }
+
+
+  /**Styles for the first slide in the carousel ends**/
+
+
+  /****Styles for the second slide in the carousel starts****/
+  .slide2{
+    position:relative;
+  }
+
+  .slide2 .header-showcase-text-2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .slide2 .header-showcase-text-2 h2{
+    font-weight: 500;
+    font-size: 2.1rem;
+    margin-top: 45px;
+  }
+
+  .slide2 .header-showcase-text-2 h3{
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  .slide2 .header-showcase-text-2 .buttons{
+    width:100%;
+  }
+
+  .slide2 .header-showcase-text-2 .buttons a button{
+    height: 30px;
+    width: 110px;
+    padding: 0.1rem 0.3rem;
+    font-size:0.75rem;
+    margin-top: 18px;
+  }
+
+  .slide2 .header-showcase-text-2 .buttons a button.new-here{
+    background-color: #fb7777;
+    color: #fff;
+    margin-right: 20px;
+  }
+
+  .slide2 .header-showcase-text-2 .buttons a button i.fa{
+    color: #000;
+    margin-right: 10px;
+  }
+
+  /****Styles for the second slide in the carousel ends****/
+
+
+  /******Styles for the third slide in the carousel starts******/
+  .slide3{
+    position: relative;
+  }
+
+  .slide3 .header-showcase-text-3{
+    width: max-content;
+    height: max-content;
+    margin: 130px 0 0 8%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slide3 .header-showcase-text-3 h2{
+    width:100%;
+    font-weight: 500;
+    font-size: 2.4rem;
+  }
+
+  .slide3 .header-showcase-text-3 h3{
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin-top: 17px;
+  }
+
+  .slide3 .header-showcase-text-3 a button{
+    height: 35px;
+    width: 85px;
+    padding: 0.7rem 0.3rem;
+    font-size:0.75rem;
+    background-color: #fb7777 !important;
+    margin-top: 15px;
+  }
+
+  /******Styles for the third slide in the carousel ends******/
+
+  /**Header showcase ends here and contains the slide and necessary texts**/
+
+  /**Program and Events showcase section starts**/
+  .program-events{
+    padding: 1.2rem 9% 1.2rem 9%;
+  }
+
+  .program-events h2{
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+
+  .program-events .program-details{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .program-events .program-details .program-det{
+    width: 25%;
+    background: transparent;
+    margin-top: 15px;
+    border-right: 1.5px solid #888;
+  }
+
+  #program-det-4{
+    border-right: 0;
+  }
+
+  .program-events .program-details .program-det .program-time{
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
+  .program-events .program-details .program-det .program-name{
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-top: 5px;
+  }
+
+  .program-events .program-details .program-det .program-day{
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom:10px;
+  }
+
+  .program-events .event-details{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .program-events .event-details button{
+    margin: 0 auto;
+    height: 35px;
+    width: 110px;
+    background-color: #fb7777;
+    border: 0;
+    color: #fff;
+    font-weight: 400;
+    font-size: 0.75rem;
+    border-radius: 17.5px;
+  }
+
+  /**Program and Events showcase section ends**/
+
+  /**Program activities a beautiful section of pictures and texts starts**/
+  .program-activities{
+    width: 100%;
+    padding: 1rem 4% 1.5rem 4%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap:8px;
+  }
+
+  .program-activities .program-act{
+    position: relative;
+    width: 48%;
+    height: 150px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+
+  .program-activities .program-act-1{
+    background-image: url(./images/worship.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .program-activities .program-act-2{
+    background-image: url(./images/giving.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 0 !important;
+  }
+
+  .program-activities .program-act-3{
+    background-image: url(./images/worship3.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 0 !important;
+  }
+
+  .program-activities .program-act .program-act-text{
+    margin: 25px 0 0 20px;
+  }
+
+  .program-activities .program-act .program-act-text h4{
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+
+  .program-activities #online-giving.program-act{
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .program-activities #online-giving.program-act .online-giving-text{
+    z-index:10;
+  }
+
+  .program-activities #online-giving.program-act .online-giving-text h4{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  /**Program activities a beautiful section of pictures and texts ends**/
+
+
+  /**The large bible verse showcase starts**/
+  .major-verse{
+    width: 100%;
+    padding: 1.8rem 4% 1rem 4%;
+  }
+
+  .major-verse .inner-major-verse{
+    width:100%;
+    padding: 30px 20px 30px 20px;
+    /*background-color: #f5f7fa;*/
+    border-radius: 10px;
+    box-shadow: 4px 0px 30px 0px rgba(0,0,0,0.5);
+    display:flex;
+    flex-direction: column;
+    background-image: url(./images/biblewhitespace.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .major-verse .inner-major-verse h2{
+    font-size: 27px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+
+  .major-verse .inner-major-verse h3{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+    font-weight: 400;
+    margin-top: 14px;
+  }
+  /**The large bible verse showcase ends**/
+
+  /**Word of Hope section starts**/
+  .words-of-hope{
+    width:100%;
+    padding: 3rem 4% 2.5rem 4%; 
+    background-color: #fff;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .words-of-hope .hope-words{
+    width:48%;
+    padding: 30px 20px 30px 20px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.224);
+    margin-top: 7px;
+  }
+
+  .words-of-hope .hope-words .heading{
+    display:flex;
+    flex-direction: column;
+  }
+
+  .words-of-hope .hope-words .heading h2{
+    font-size: 27px;
+    line-height: 34px;
+    font-weight: 700;
+  }
+
+  .words-of-hope .hope-words .contents{
+    margin-top: 15px;
+  }
+
+  .words-of-hope .hope-words .contents h3{
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  .words-of-hope .hope-words .read-more{
+    margin-top: 13px;
+  }
+
+  .words-of-hope .hope-words .read-more .read-more-btn{
+    height: 40px;
+    width: 110px;
+    background-color: rgba(251, 119, 119, 0.639);
+  }
+
+  .words-of-hope .hope-words .read-more .read-more-btn p{
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+    z-index: 2;
+  }
+
+  .words-of-hope .hope-words .read-more .read-more-btn::before{
+    width:100% !important;
+    background-color: #fb7777;
+  }
+
+  .words-of-hope .hope-words .read-more .read-more-btn::after{
+    width: 100% !important;
+    background-color: #fb7777;
+  }
+  /**Word of Hope section ends**/
+
+  /*Footer starts*/
+  footer{
+    width:100%;
+    padding: 1.5rem 4% 2rem 4%;
+  }
+
+  footer .footer-heading a{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  footer .footer-heading a img.footer-logo{
+    height: 60px;
+    width:60px;
+  }
+
+  footer .footer-heading a .footer-logo-text{
+    font-family: 'Raleway' , 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.9rem 0;
+  }
+
+
+  footer .footer-heading a .footer-logo-text h2:first-of-type{
+    margin-top: 0.4rem;
+  }
+
+  footer .footer-heading a .footer-logo-text h2:last-of-type{
+    margin-bottom: 0.8rem;
+  }
+
+  footer .copyright{
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  footer .footer-links{
+    margin-top: 2.4rem;
+  }
+
+  footer .footer-links a.fa{
+    margin-left:2rem;
+    font-weight: 400;
+  }
+
+  footer .footer-links a.fa:hover{
+    color: #000;
+  }
+
+  footer .footer-links a.fa-facebook{
+    margin-left:0 !important;
+  }
+/**Footer ends**/
+
+/**Fixed whatsapp link at bottom right**/
+  .whatsapp-link{
+    bottom: 3vh;
+    right: 3vw;
+  }
+
+  .whatsapp-link .walink-text{
+    padding: 0.2rem;
+    border-radius: 5px 5px 8px 8px;
+    font-size:10px;
+    font-family: Poppins , sans-serif;
+    color: #444;
+    margin-right: 10px;
+  }
+
+  .whatsapp-link .walink-logo{
+    width:max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .whatsapp-link .walink-logo img{
+    height: 45px;
+  }
+
+  .whatsapp-link .walink-text .bolded{
+    color: #000;
+    font-weight: 600;
+  }
+/**Fixed whatsapp link at bottom right**/
+}
+/**** Media query for max-width of 680px****/

@@ -1,0 +1,1705 @@
+/**This styles affect all pages**/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+  position: relative;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+/**This styles affect all pages**/
+
+
+/*Navbar start*/
+header {
+    display: block;
+    width: 100%;
+    color: #fff;
+    top:0;
+    right:0;
+}
+
+header #header-nav {
+    width: 100%;
+    position:fixed;
+    z-index: 15;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 0.3rem 7% 0 7%;
+    /*
+    display: flex;
+    flex-direction: row;
+    align-items: center;*/
+    background: transparent;
+    transition: 0.5s all ease;
+}
+
+header #header-nav .first-nav{
+  width:100%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header nav .first-nav .navlogo a #logo{
+    height: 100px;
+    transition: 0.3s all ease;
+}
+
+header nav .first-nav .navright{
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+header nav .first-nav .navright ul{
+  display: block;
+  position: relative;
+  list-style-type: none;
+  transform: translateY(-13px);
+} 
+
+header nav .first-nav .navright ul li {
+  display: inline-block;
+  margin: 0 1.3rem;
+  height: 100%;
+  position: relative;
+  height: 100%;
+  font-family:Montserrat;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+header nav .first-nav .navright ul li a.main-navlink{
+  color: #fff;
+  font-family:Montserrat;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#whoweare-main:hover #whoweare-sub{
+  opacity: 1;
+  visibility: visible;
+}
+
+header nav .first-nav .navright ul li .hover-links{
+  opacity: 0;
+  visibility: hidden;
+  width: 260px;
+  height:max-content;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  transform-origin: 0 0 0;
+  transform: translateY(15px);
+  padding: 20px 20px 25px 0;
+  left: -20px;
+  z-index: 20 !important;
+  transition: 0.3s all ease;
+  box-shadow: 0 0 2px rgba(0,0,0,.1);
+  display:flex;
+  flex-direction: column;
+}
+
+header nav .first-nav .navright ul li .hover-links::before{
+  content:"";
+  top:0;
+  position:absolute;
+  display: inline-block;
+  height:2px;
+  width:100px;
+  background-color: #fb7777;
+  z-index: 20 !important;
+  margin-left: 15px;
+  transition: 0.5s all ease;
+}
+
+header nav .first-nav .navright ul li .hover-links li{
+  width: calc(100% - 20px);
+  padding: 10px 0 10px 10px;
+  border-radius: 4px;
+}
+
+header nav .navright ul li .hover-links li:hover{
+  background-color: #fb7777;
+}
+
+header nav .first-nav .navright ul li .hover-links li a{
+  color: #111;
+  line-height: 12px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+header nav .first-nav .navright ul li a:hover{
+  color: #fb7777;
+}
+
+header nav .first-nav .navright ul li a#on-page{
+  /*
+    background-color: #fb7777;
+    padding: 0.25rem 1rem;
+    border-radius: 5% / 10%;*/
+    color: #fb7777 !important;
+}
+
+header nav .first-nav .navright a.fa{
+  display:none;
+  color: #fb7777;
+  font-size: 1.7rem;
+  font-weight: 300;
+  transition: 0.5s all ease;
+}
+
+header #header-nav .second-nav{
+  width:100%;
+  height: max-content;
+}
+
+header #header-nav .second-nav #nav-dropdown{
+  position:relative;
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  transition: 2s all ease !important;
+}
+
+#nav-dropdown{
+  height: 0;
+  transition: 2s all ease !important;
+}
+
+header .nav-closed{
+  height: 0 !important;
+}
+
+header .nav-opened{
+  height: max-content !important;
+}
+
+
+header #header-nav .second-nav #nav-dropdown ul{
+  display:flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+#nav-dropdown ul li{
+  width: 100%;
+  border-top: 1px solid #777;
+  padding: 0.5rem 7%;
+}
+
+#nav-dropdown ul li:last-of-type{
+  border-bottom: 2px solid #fb7777;
+}
+
+#nav-dropdown ul li a{
+  color: #444;
+  font-size: 14px;
+  font-family: Poppins , sans-serif;
+  font-weight: 600;
+}
+
+#nav-dropdown ul li a:hover{
+  color: #fb7777;
+}
+
+#nav-dropdown ul li#navdrop-menu{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+#nav-dropdown ul li#navdrop-menu .navdrop-mainlink{
+  width:100%;
+  border-top: 1px solid #777;
+  padding: 0.5rem 0 0.5rem 7%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#nav-dropdown ul li#navdrop-menu .navdrop-mainlink i.fa{
+  color: #fb7777 !important;
+  margin-left: auto;
+  transition: 0.5s all ease; 
+}
+
+#nav-dropdown ul li#navdrop-menu .navdrop-sublinks{
+  overflow: hidden;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+}
+
+li#navdrop-menu .menu-closed{
+  height: 0;
+}
+
+li#navdrop-menu .menu-opened{
+  height: max-content;
+}
+
+#nav-dropdown ul li#navdrop-menu .navdrop-sublinks a.text-link{
+  width:100%;
+  border-top: 1px solid #777;
+  padding: 0.5rem 0 0.5rem calc(7% + 20px);
+}
+/**Navbar stops**/
+
+/*Header Showcase starts*/
+.header-showcase{
+    width: 100%;
+    height: 450px;
+    background-image: url('./images/worship5.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-showcase h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: 3.5rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+/*Header Showcase ends*/
+
+/*Admonition word starts*/
+.admonition{
+  width:100%;
+  padding: 2rem 4% 1.5rem 4%;
+  background-color: rgb(248, 248, 248);
+}
+
+.admonition .inner-admonition{
+  position: relative;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
+}
+
+.admonition .inner-admonition h2{
+  text-align: center;
+  color: #f45959;
+  font-family: 'Raleway' , sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.admonition .inner-admonition h3{
+  text-align: center;
+  color: #141313;
+  font-family: 'Raleway' , sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8;
+  word-spacing: 1.2;
+  margin-top: 25px;
+}
+
+.admonition .get-in-touch{
+  position: relative;
+  width:100%;
+  margin-top: 30px;
+}
+
+.admonition .get-in-touch .get-in-touch-txt{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f45959;
+}
+
+.admonition .get-in-touch .get-in-touch-txt h4{
+  font-family: 'Raleway' , sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 1.2;
+}
+
+.admonition .get-in-touch .get-in-touch-txt svg{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#get-in-touch:hover #get-in-touch-texts{
+  color: #e51818;
+}
+
+#get-in-touch:hover #get-in-touch-texts-1{
+  text-decoration: underline;
+}
+
+/*Admonition word ends*/
+
+/*Main Blog content starts*/
+.blog-content{
+  width:100%;
+  padding: 4rem 7% 5rem 7%;
+  background: #fff;
+}
+
+.inner-blog-content{
+  position: relative;
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.inner-blog-content .blog-box{
+  width:23%;
+  height: max-content;
+  border-radius: 1em;
+  box-shadow: 0 3px 3px rgba(0,0,0,.1607843137254902);
+  overflow: hidden;
+  /*border:3px solid transparent;*/
+  transition: 0.3s all ease;
+  box-sizing: content-box;
+}
+
+.inner-blog-content .blog-box:hover{
+  /*border: 3px solid #a4a4a4; */
+  box-shadow: 0 3px 3px rgba(0,0,0,0.7);
+}
+
+.inner-blog-content .blog-box img{
+  width:100%;
+  height:160px;
+}
+
+.inner-blog-content .blog-box .blog-box-text{
+  width:100%;
+  height: 280px;
+  padding: 1.2rem 1rem 0 1rem;
+  overflow-y:hidden;
+}
+
+.inner-blog-content .blog-box .blog-box-text h3{
+  color: #f45959;
+  font-family:'Raleway' , sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.inner-blog-content .blog-box .blog-box-text h4{
+  color: #585858;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top:5px;
+  line-height: 1.5;
+  word-wrap:break-word;
+}
+
+.inner-blog-content .blog-box footer{
+  width:100%;
+  background-color: #f2ecec;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.inner-blog-content .blog-box footer img{
+  width:70px;
+  height:70px;
+}
+
+.inner-blog-content .blog-box footer .footer-right{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-blog-content .blog-box footer .footer-right h5{
+  color: #565656;
+  font-family:'Raleway' , sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.inner-blog-content .blog-box footer .footer-right p{
+  color: #565656;
+  font-weight:500;
+  font-family: 'Poppins' , sans-serif;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.inner-blog-content .blog-box footer .footer-right p i.fa{
+  color: #000;
+  font-size: 1.1rem;
+  margin-right: 5px;
+}
+
+/*Main Blog content ends*/
+
+/*Footer starts*/
+footer{
+  width:100%;
+  padding: 2rem 4%;
+  background-color: #000;
+}
+  
+footer .copyright{
+  text-align: center;
+  /*color: rgba(0,0,0, 0.8);*/
+  color: #b1b1b1;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 0;
+}
+
+footer .footer-links{
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+footer .footer-links a.fa{
+  color: #b1b1b1;
+  margin-left:3rem;
+  font-weight: 400;
+  transition: 0.3s all ease;
+}
+
+footer .footer-links a.fa:hover{
+  color: #fff;
+}
+
+footer .footer-links a.fa-facebook{
+  margin-left:0 !important;
+}
+/**Footer ends**/
+  
+  
+/**Fixed whatsapp link for small width devices**/
+.whatsapp-link{
+  display: block;
+  position: fixed;
+  bottom: 8vh;
+  right: 5vw;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  transition: 0.5s all ease;
+  z-index:20;
+}
+
+.whatsapp-link .walink-text{
+  padding: 0.3rem;
+  background-color: #fff;
+  border-radius: 5px 5px 8px 8px;
+  font-size:12px;
+  font-family: Poppins , sans-serif;
+  color: #444;
+  margin-right: 15px;
+}
+
+.whatsapp-link .walink-logo{
+  width:max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.whatsapp-link .walink-logo img{
+  height: 50px;
+}
+
+.whatsapp-link .walink-text .bolded{
+  color: #000;
+  font-weight: 600;
+}
+/****Fixed whatsapp link for small width devices ends****/
+
+
+/**** Media query for min-width of 950px*/
+@media (min-width:950px) {
+  header #header-nav .second-nav  #nav-dropdown{
+      height: 0 !important;
+  }
+}
+
+
+/**** Media query for max-width of 950px*/
+@media (max-width: 950px) {
+    header #header-nav {
+    padding: 0.3rem 4% 0 4%;
+    background-color: #fff !important;
+    }
+    header #header-nav .first-nav{
+    border-bottom: 2px solid #fb7777;
+    }
+
+    header nav .first-nav .navlogo a #logo{
+    height: 70px !important;
+    }
+
+    header nav .first-nav .navright ul{
+    display: none;
+    }
+    header nav .first-nav .navright a.fa{
+    display: inline-block;
+    font-size: 1.5rem;
+    }
+
+    /*Header Showcase starts*/
+    .header-showcase{
+      width: 100%;
+      height: 420px;
+    }
+
+    .header-showcase h1{
+      font-size: 3.3rem;
+      line-height: 1.3;
+    }
+    /*Header Showcase ends*/
+
+    /*Admonition word starts*/
+    .admonition{
+      width:100%;
+      padding: 2rem 4% 1.5rem 4%;
+      background-color: rgb(248, 248, 248);
+    }
+
+    .admonition .inner-admonition{
+      width:100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0 5%;
+    }
+
+    .admonition .inner-admonition h2{
+      font-size: 2.3rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .admonition .inner-admonition h3{
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 1.5;
+      word-spacing: 1.2;
+      margin-top: 20px;
+    }
+
+    .admonition .get-in-touch{
+      position: relative;
+      width:100%;
+      margin-top: 25px;
+    }
+
+    .admonition .get-in-touch .get-in-touch-txt{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .admonition .get-in-touch .get-in-touch-txt h4{
+      font-weight: 600;
+      font-size: 1.3rem;
+      letter-spacing: 1.2;
+    }
+
+    .admonition .get-in-touch .get-in-touch-txt svg{
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    #get-in-touch-texts{
+      color: #e51818 !important;
+    }
+
+    #get-in-touch-texts-1{
+      text-decoration: underline !important;
+    }
+
+    /*Admonition word ends*/
+
+    /*Main Blog content starts*/
+    .blog-content{
+      width:100%;
+      padding: 3rem 3% 4rem 3%;
+    }
+
+    .inner-blog-content{
+      position: relative;
+      width:100%;
+      display:flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .inner-blog-content .blog-box{
+      width:31%;
+      border-radius: 1em;
+      box-sizing: content-box;
+      box-shadow: 0 2px 2px rgba(0,0,0,0.7) !important;
+      margin-top: 25px;
+    }
+
+    .inner-blog-content .blog-box img{
+      width:100%;
+      height:145px;
+    }
+
+    .inner-blog-content .blog-box .blog-box-text{
+      width:100%;
+      height: 250px;
+      padding: 1.1rem 1rem 0 1rem;
+      overflow-y: hidden;
+    }
+
+    .inner-blog-content .blog-box .blog-box-text h3{
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    .inner-blog-content .blog-box .blog-box-text h4{
+      font-size: 1rem;
+      margin-top:5px;
+      line-height: 1.4;
+      word-wrap:break-word;
+    }
+
+    .inner-blog-content .blog-box footer{
+      width:100%;
+      padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .inner-blog-content .blog-box footer img{
+      width:65px;
+      height:65px;
+    }
+
+    .inner-blog-content .blog-box footer .footer-right{
+      width:100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .inner-blog-content .blog-box footer .footer-right h5{
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .inner-blog-content .blog-box footer .footer-right p{
+      font-weight:500;
+      font-size: 0.9rem;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+    }
+
+    .inner-blog-content .blog-box footer .footer-right p i.fa{
+      color: #000;
+      font-size: 1.1rem;
+      margin-right: 4px;
+    }
+
+    /*Main Blog content ends*/
+
+    /*Footer starts*/
+    footer{
+      width:100%;
+      padding: 2.2rem 4% 2.4rem 4%;
+    }
+      
+    footer .copyright{
+      font-size: 1.1rem;
+      margin-top: 0;
+    }
+
+    footer .footer-links{
+      width:100%;
+      margin-top: 2.4rem;
+    }
+
+    footer .footer-links a.fa{
+      margin-left:2.5rem;
+      font-weight: 400;
+      transition: 0.3s all ease;
+      font-size: 1.2rem;
+    }
+
+    footer .footer-links a.fa:hover{
+      color: #fff;
+    }
+
+    footer .footer-links a.fa-facebook{
+      margin-left:0 !important;
+    }
+    /**Footer ends**/
+}
+/**** Media query for max-width of 950px*/
+
+
+
+/**** Media query for max-width of 700px*/
+@media (max-width: 700px) {
+  header #header-nav {
+  padding: 0.2rem 4% 0 4%;
+  background-color: #fff !important;
+  }
+  header #header-nav .first-nav{
+  border-bottom: 2px solid #fb7777;
+  }
+
+  header nav .first-nav .navlogo a #logo{
+  height: 65px !important;
+  }
+
+  header nav .first-nav .navright ul{
+  display: none;
+  }
+  header nav .first-nav .navright a.fa{
+  display: inline-block;
+  font-size: 1.5rem;
+  }
+
+  /*Header Showcase starts*/
+  .header-showcase{
+    width: 100%;
+    height: 380px;
+  }
+
+  .header-showcase h1{
+    font-size: 3rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+  /*Header Showcase ends*/
+
+  /*Admonition word starts*/
+  .admonition{
+    width:100%;
+    padding: 1.5rem 4% 1rem 4%;
+    background-color: rgb(248, 248, 248);
+  }
+
+  .admonition .inner-admonition{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+  }
+
+  .admonition .inner-admonition h2{
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .admonition .inner-admonition h3{
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.4;
+    word-spacing: 1.2;
+    margin-top: 17px;
+  }
+
+  .admonition .get-in-touch{
+    position: relative;
+    width:100%;
+    margin-top: 20px;
+  }
+
+  .admonition #get-in-touch-texts{
+    color: #e51818;
+    padding-bottom: 3px;
+  }
+
+  .admonition #get-in-touch-texts-1{
+    text-decoration: underline !important;
+  }
+
+  .admonition .get-in-touch .get-in-touch-txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .admonition .get-in-touch .get-in-touch-txt h4{
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 1.2;
+  }
+
+  .admonition .get-in-touch .get-in-touch-txt svg{
+    display: inline-block;
+    vertical-align: middle;
+    height: 18px;
+  }
+
+  /*Admonition word ends*/
+
+  /*Main Blog content starts*/
+  .blog-content{
+    width:100%;
+    padding: 2rem 7% 3rem 7%;
+  }
+
+  .inner-blog-content{
+    position: relative;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .inner-blog-content .blog-box{
+    width:48%;
+    border-radius: 1rem;
+    box-sizing: content-box;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.7) !important;
+    margin-top: 15px;
+  }
+
+  .inner-blog-content .blog-box img{
+    width:100%;
+    height:140px;
+  }
+
+  .inner-blog-content .blog-box .blog-box-text{
+    width:100%;
+    height: 240px;
+    padding: 1.1rem 1rem 0 1rem;
+    overflow-y: hidden;
+  }
+
+  .inner-blog-content .blog-box .blog-box-text h3{
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .inner-blog-content .blog-box .blog-box-text h4{
+    font-size: 1rem;
+    margin-top:5px;
+    line-height: 1.4;
+    word-wrap:break-word;
+  }
+
+  .inner-blog-content .blog-box footer{
+    width:100%;
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .inner-blog-content .blog-box footer img{
+    width:65px;
+    height:65px;
+  }
+
+  .inner-blog-content .blog-box footer .footer-right{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inner-blog-content .blog-box footer .footer-right h5{
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  .inner-blog-content .blog-box footer .footer-right p{
+    font-weight:500;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .inner-blog-content .blog-box footer .footer-right p i.fa{
+    color: #000;
+    font-size: 1.1rem;
+    margin-right: 4px;
+  }
+
+  /*Main Blog content ends*/
+
+  /*Footer starts*/
+  footer{
+    width:100%;
+    padding: 1.5rem 4% 2rem 4%;
+  }
+    
+  footer .copyright{
+    font-size: 1rem;
+    margin-top: 0;
+  }
+
+  footer .footer-links{
+    width:100%;
+    margin-top: 2.4rem;
+  }
+
+  footer .footer-links a.fa{
+    margin-left:2rem;
+    font-weight: 400;
+    transition: 0.3s all ease;
+    font-size: 1.2rem;
+  }
+
+  footer .footer-links a.fa:hover{
+    color: #fff;
+  }
+
+  footer .footer-links a.fa-facebook{
+    margin-left:0 !important;
+  }
+  /**Footer ends**/
+
+  /**Fixed whatsapp link at bottom right**/
+  .whatsapp-link{
+    right: 3vw;
+  }
+
+  .whatsapp-link .walink-text{
+    padding: 0.2rem;
+    border-radius: 3px 3px 6px 6px;
+    font-size:10px;
+    margin-right: 8px;
+  }
+
+  .whatsapp-link .walink-logo{
+    width:max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .whatsapp-link .walink-logo img{
+    height: 40px;
+  }
+
+  .whatsapp-link .walink-text .bolded{
+    color: #000;
+    font-weight: 600;
+  }
+  /**Fixed whatsapp link at bottom right**/
+}
+/**** Media query for max-width of 700px*/
+
+
+
+
+/**** Media query for max-width of 500px*/
+@media (max-width: 500px) {
+  header #header-nav {
+  padding: 0.2rem 4% 0 4%;
+  background-color: #fff !important;
+  }
+  header #header-nav .first-nav{
+  border-bottom: 1px solid #fb7777;
+  }
+
+  header nav .first-nav .navlogo a #logo{
+  height: 65px !important;
+  }
+
+  header nav .first-nav .navright ul{
+  display: none;
+  }
+  header nav .first-nav .navright a.fa{
+  display: inline-block;
+  font-size: 1.3rem;
+  }
+
+  /**Code for the Dropdown on small width devices start here**/
+  header #header-nav .second-nav #nav-dropdown{
+    position:relative;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  #nav-dropdown{
+    height: 0;
+  }
+
+  header .nav-closed{
+    height: 0 !important;
+  }
+
+  header .nav-opened{
+    height: max-content !important;
+  }
+
+
+  header #header-nav .second-nav #nav-dropdown ul{
+    display:flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+
+  #nav-dropdown ul li{
+    width: 100%;
+    border-top: 1px solid #777;
+    padding: 0.5rem 5%;
+  }
+
+  #nav-dropdown ul li:last-of-type{
+    border-bottom: 1px solid #fb7777;
+  }
+
+  #nav-dropdown ul li a{
+    color: #444;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  #nav-dropdown ul li a:hover{
+    color: #fb7777;
+  }
+
+  #nav-dropdown ul li#navdrop-menu{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-mainlink{
+    width:100%;
+    padding: 0.5rem 0 0.5rem 5%;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-mainlink i.fa{
+    font-size: 0.9rem;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-sublinks{
+    overflow: hidden;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+  }
+
+  li#navdrop-menu .menu-closed{
+    height: 0;
+  }
+
+  li#navdrop-menu .menu-opened{
+    height: max-content;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-sublinks a.text-link{
+    width:100%;
+    border-top: 1px solid #777;
+    padding: 0.5rem 0 0.5rem calc(7% + 20px);
+  }
+  /**Code for the Dropdown on small width devices end here**/
+
+  /*Header Showcase starts*/
+  .header-showcase{
+    width: 100%;
+    height: 340px;
+  }
+
+  .header-showcase h1{
+    font-size: 2.9rem;
+    line-height: 1.2;
+  }
+  /*Header Showcase ends*/
+
+  /*Admonition word starts*/
+  .admonition{
+    width:100%;
+    padding: 1.2rem 4% 0.9rem 4%;
+    background-color: rgb(248, 248, 248);
+  }
+
+  .admonition .inner-admonition{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+  }
+
+  .admonition .inner-admonition h2{
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .admonition .inner-admonition h3{
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.4;
+    word-spacing: 1.2;
+    margin-top: 14px;
+  }
+
+  .admonition .get-in-touch{
+    position: relative;
+    width:100%;
+    margin-top: 20px;
+  }
+
+  .admonition #get-in-touch-texts{
+    color: #e51818;
+    padding-bottom: 3px;
+  }
+
+  .admonition #get-in-touch-texts-1{
+    text-decoration: underline !important;
+  }
+
+  .admonition .get-in-touch .get-in-touch-txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .admonition .get-in-touch .get-in-touch-txt h4{
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 1.2;
+  }
+
+  .admonition .get-in-touch .get-in-touch-txt svg{
+    display: inline-block;
+    vertical-align: middle;
+    height: 17px;
+  }
+
+  /*Admonition word ends*/
+
+  /*Main Blog content starts*/
+  .blog-content{
+    width:100%;
+    padding: 1.4rem 16% 2.7rem 16%;
+  }
+
+  .inner-blog-content{
+    position: relative;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+  }
+
+  .inner-blog-content .blog-box{
+    width:98%;
+    border-radius: 1em;
+    box-sizing: content-box;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.7) !important;
+    margin-top: 40px;
+  }
+
+  .inner-blog-content .blog-box img{
+    width:100%;
+    height:155px;
+  }
+
+  .inner-blog-content .blog-box .blog-box-text{
+    width:100%;
+    height: 230px;
+    padding: 0.7rem 0.5rem 0 0.6rem;
+    overflow-y: hidden;
+  }
+
+  .inner-blog-content .blog-box .blog-box-text h3{
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .inner-blog-content .blog-box .blog-box-text h4{
+    font-size: 1.0em;
+    margin-top:5px;
+    line-height: 1.4;
+    word-wrap:break-word;
+  }
+
+  .inner-blog-content .blog-box footer{
+    width:100%;
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .inner-blog-content .blog-box footer img{
+    width:65px;
+    height:65px;
+  }
+
+  .inner-blog-content .blog-box footer .footer-right{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inner-blog-content .blog-box footer .footer-right h5{
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+
+  .inner-blog-content .blog-box footer .footer-right p{
+    font-weight:500;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .inner-blog-content .blog-box footer .footer-right p i.fa{
+    color: #000;
+    font-size: 1.1rem;
+    margin-right: 4px;
+  }
+
+  /*Main Blog content ends*/
+
+  /*Footer starts*/
+  footer{
+    width:100%;
+    padding: 1.5rem 4% 2.3rem 4%;
+  }
+    
+  footer .copyright{
+    font-size: 0.9rem;
+    margin-top: 0;
+  }
+
+  footer .footer-links{
+    width:100%;
+    margin-top: 2rem;
+  }
+
+  footer .footer-links a.fa{
+    margin-left:1.8rem;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  footer .footer-links a.fa:hover{
+    color: #fff;
+  }
+
+  footer .footer-links a.fa-facebook{
+    margin-left:0 !important;
+  }
+  /**Footer ends**/
+
+  /**Fixed whatsapp link at bottom right**/
+  .whatsapp-link{
+    bottom: 10vh;
+    right: 3vw;
+  }
+
+  .whatsapp-link .walink-text{
+    padding: 0.2rem;
+    border-radius: 3px 3px 6px 6px;
+    font-size:10px;
+    margin-right: 8px;
+  }
+
+  .whatsapp-link .walink-logo{
+    width:max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .whatsapp-link .walink-logo img{
+    height: 40px;
+  }
+
+  .whatsapp-link .walink-text .bolded{
+    color: #000;
+    font-weight: 600;
+  }
+  /**Fixed whatsapp link at bottom right**/
+}
+/**** Media query for max-width of 500px*/
+
+
+
+
+/**** Media query for max-width of 330px*/
+@media (max-width: 330px) {
+  header #header-nav {
+  padding: 0.2rem 4% 0 4%;
+  background-color: #fff !important;
+  }
+  header #header-nav .first-nav{
+  border-bottom: 1px solid #fb7777;
+  }
+
+  header nav .first-nav .navlogo a #logo{
+  height: 50px !important;
+  }
+
+  header nav .first-nav .navright ul{
+  display: none;
+  }
+  header nav .first-nav .navright a.fa{
+  display: inline-block;
+  font-size: 1.1rem;
+  }
+
+  /**Code for the Dropdown on small width devices start here**/
+  header #header-nav .second-nav #nav-dropdown{
+    position:relative;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  #nav-dropdown{
+    height: 0;
+  }
+
+  header .nav-closed{
+    height: 0 !important;
+  }
+
+  header .nav-opened{
+    height: max-content !important;
+  }
+
+
+  header #header-nav .second-nav #nav-dropdown ul{
+    display:flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+
+  #nav-dropdown ul li{
+    width: 100%;
+    border-top: 1px solid #777;
+    padding: 0.5rem 5%;
+  }
+
+  #nav-dropdown ul li:last-of-type{
+    border-bottom: 1px solid #fb7777;
+  }
+
+  #nav-dropdown ul li a{
+    color: #444;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  #nav-dropdown ul li a:hover{
+    color: #fb7777;
+  }
+
+  #nav-dropdown ul li#navdrop-menu{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-mainlink{
+    width:100%;
+    padding: 0.5rem 0 0.5rem 5%;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-mainlink i.fa{
+    font-size: 0.8rem;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-sublinks{
+    overflow: hidden;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+  }
+
+  li#navdrop-menu .menu-closed{
+    height: 0;
+  }
+
+  li#navdrop-menu .menu-opened{
+    height: max-content;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-sublinks a.text-link{
+    width:100%;
+    border-top: 1px solid #777;
+    padding: 0.5rem 0 0.5rem calc(7% + 20px);
+  }
+  /**Code for the Dropdown on small width devices end here**/
+
+  /*Header Showcase starts*/
+  .header-showcase{
+    width: 100%;
+    height: 310px;
+  }
+
+  .header-showcase h1{
+    font-size: 2.6rem;
+    line-height: 1.1;
+    text-align: center;
+  }
+  /*Header Showcase ends*/
+
+  /*Admonition word starts*/
+  .admonition{
+    width:100%;
+    padding: 1.2rem 2% 0.9rem 2%;
+    background-color: rgb(248, 248, 248);
+  }
+
+  .admonition .inner-admonition{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+  }
+
+  .admonition .inner-admonition h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .admonition .inner-admonition h3{
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.4;
+    word-spacing: 1.2;
+    margin-top: 12px;
+  }
+
+  .admonition .get-in-touch{
+    position: relative;
+    width:100%;
+    margin-top: 16px;
+  }
+
+  .admonition #get-in-touch-texts{
+    color: #e51818;
+    padding-bottom: 3px;
+  }
+
+  .admonition #get-in-touch-texts-1{
+    text-decoration: underline !important;
+  }
+
+  .admonition .get-in-touch .get-in-touch-txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .admonition .get-in-touch .get-in-touch-txt h4{
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1.2;
+  }
+
+  .admonition .get-in-touch .get-in-touch-txt svg{
+    display: inline-block;
+    vertical-align: middle;
+    height: 15px;
+  }
+
+  /*Admonition word ends*/
+
+  /*Main Blog content starts*/
+  .blog-content{
+    width:100%;
+    padding: 1.1rem 10% 2.3rem 10%;
+  }
+
+  .inner-blog-content{
+    position: relative;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+  }
+
+  .inner-blog-content .blog-box{
+    width:98%;
+    border-radius: 1em;
+    box-sizing: content-box;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.7) !important;
+    margin-top: 40px;
+  }
+
+  .inner-blog-content .blog-box img{
+    width:100%;
+    height:140px;
+  }
+
+  .inner-blog-content .blog-box .blog-box-text{
+    width:100%;
+    height: 210px;
+    padding: 0.5rem 0.3rem 0 0.4rem;
+    overflow-y: hidden;
+  }
+
+  .inner-blog-content .blog-box .blog-box-text h3{
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .inner-blog-content .blog-box .blog-box-text h4{
+    font-size: 0.95rem;
+    margin-top:5px;
+    line-height: 1.4;
+    word-wrap:break-word;
+  }
+
+  .inner-blog-content .blog-box footer{
+    width:100%;
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .inner-blog-content .blog-box footer img{
+    width:60px;
+    height:60px;
+  }
+
+  .inner-blog-content .blog-box footer .footer-right{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inner-blog-content .blog-box footer .footer-right h5{
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .inner-blog-content .blog-box footer .footer-right p{
+    font-weight:500;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .inner-blog-content .blog-box footer .footer-right p i.fa{
+    color: #000;
+    font-size: 1rem;
+    margin-right: 4px;
+  }
+
+  /*Main Blog content ends*/
+
+  /*Footer starts*/
+  footer{
+    width:100%;
+    padding: 1.5rem 3% 2rem 3%;
+  }
+    
+  footer .copyright{
+    font-size: 0.9rem;
+    margin-top: 0;
+  }
+
+  footer .footer-links{
+    width:100%;
+    margin-top: 1.5rem;
+  }
+
+  footer .footer-links a.fa{
+    margin-left:1.3rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+
+  footer .footer-links a.fa:hover{
+    color: #fff;
+  }
+
+  footer .footer-links a.fa-facebook{
+    margin-left:0 !important;
+  }
+  /**Footer ends**/
+
+  /**Fixed whatsapp link at bottom right**/
+  .whatsapp-link{
+    right: 3vw;
+  }
+
+  .whatsapp-link .walink-text{
+    padding: 0.2rem;
+    border-radius: 3px 3px 6px 6px;
+    font-size:8x;
+    margin-right: 4px;
+  }
+
+  .whatsapp-link .walink-logo{
+    width:max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .whatsapp-link .walink-logo img{
+    height: 30px;
+  }
+
+  .whatsapp-link .walink-text .bolded{
+    color: #000;
+    font-weight: 600;
+  }
+  /**Fixed whatsapp link at bottom right**/
+}
+
+/**** Media query for max-width of 330px*/

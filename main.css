@@ -1,0 +1,3567 @@
+/**Customary styling to all pages start**/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+  position: relative;
+}
+
+a{
+  text-decoration: none !important;
+  color: #000;
+}
+/**Customary styling to all pages ends**/
+
+
+/*Navbar start*/
+header {
+    display: block;
+    width: 100%;
+    color: #fff;
+    top:0;
+    right:0;
+}
+
+header #header-nav {
+    width: 100%;
+    position:fixed;
+    z-index: 15;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 0.3rem 7% 0 7%;
+    /*
+    display: flex;
+    flex-direction: row;
+    align-items: center;*/
+    background: transparent;
+    transition: 0.5s all ease;
+}
+
+header #header-nav .first-nav{
+  width:100%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header nav .first-nav .navlogo a #logo{
+  height: 100px;
+  transition: 0.3s all ease;
+}
+
+header nav .first-nav .navright{
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+header nav .first-nav .navright ul{
+  display: block;
+  position: relative;
+  list-style-type: none;
+  transform: translateY(-13px);
+} 
+
+header nav .first-nav .navright ul li {
+  display: inline-block;
+  margin: 0 1.3rem;
+  height: 100%;
+  position: relative;
+  height: 100%;
+  font-family:Montserrat;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+header nav .first-nav .navright ul li a.main-navlink{
+  color: #fff;
+  font-family:Montserrat;
+  font-weight: bold;
+  font-size: calc(12rem / 16);
+  /*font-size: 12px;*/
+}
+
+#whoweare-main:hover #whoweare-sub{
+  opacity: 1;
+  visibility: visible;
+}
+
+header nav .first-nav .navright ul li .hover-links{
+  opacity: 0;
+  visibility: hidden;
+  width: 260px;
+  height:max-content;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  transform-origin: 0 0 0;
+  transform: translateY(15px);
+  padding: 20px 20px 25px 0;
+  left: -20px;
+  z-index: 20 !important;
+  transition: 0.3s all ease;
+  box-shadow: 0 0 2px rgba(0,0,0,.1);
+  display:flex;
+  flex-direction: column;
+}
+
+header nav .first-nav .navright ul li .hover-links::before{
+  content:"";
+  top:0;
+  position:absolute;
+  display: inline-block;
+  height:2px;
+  width:100px;
+  background-color: #fb7777;
+  z-index: 20 !important;
+  margin-left: 15px;
+  transition: 0.5s all ease;
+}
+
+header nav .first-nav .navright ul li .hover-links li{
+  width: calc(100% - 20px);
+  padding: 10px 0 10px 10px;
+  border-radius: 4px;
+}
+
+header nav .navright ul li .hover-links li:hover{
+  background-color: #fb7777;
+}
+
+header nav .first-nav .navright ul li .hover-links li a{
+  color: #111;
+  line-height: 12px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+header nav .first-nav .navright ul li a:hover{
+  color: #fb7777;
+}
+
+header nav .first-nav .navright ul li a#on-page{
+  /*
+    background-color: #fb7777;
+    padding: 0.25rem 1rem;
+    border-radius: 5% / 10%;*/
+    color: #fb7777 !important;
+}
+
+header nav .first-nav .navright a.fa{
+  display:none;
+  color: #fb7777;
+  font-size: 1.7rem;
+  font-weight: 300;
+  transition: 0.5s all ease;
+}
+
+header #header-nav .second-nav{
+  width:100%;
+  height: max-content;
+}
+
+
+/**Code for the Dropdown on small width devices start here**/
+header #header-nav .second-nav #nav-dropdown{
+  position:relative;
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  transition: 2s all ease !important;
+}
+
+#nav-dropdown{
+  height: 0;
+  transition: 2s all ease !important;
+}
+
+header .nav-closed{
+  height: 0 !important;
+}
+
+header .nav-opened{
+  height: max-content !important;
+}
+
+
+header #header-nav .second-nav #nav-dropdown ul{
+  display:flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+#nav-dropdown ul li{
+  width: 100%;
+  border-top: 1px solid #777;
+  padding: 0.5rem 7%;
+}
+
+#nav-dropdown ul li:last-of-type{
+  border-bottom: 2px solid #fb7777;
+}
+
+#nav-dropdown ul li a{
+  color: #444;
+  font-size: 14px;
+  font-family: Poppins , sans-serif;
+  font-weight: 600;
+}
+
+#nav-dropdown ul li a:hover{
+  color: #fb7777;
+}
+
+#nav-dropdown ul li#navdrop-menu{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+#nav-dropdown ul li#navdrop-menu .navdrop-mainlink{
+  width:100%;
+  padding: 0.5rem 0 0.5rem 7%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#nav-dropdown ul li#navdrop-menu .navdrop-mainlink i.fa{
+  color: #fb7777 !important;
+  margin-left: auto;
+  transition: 0.5s all ease; 
+}
+
+#nav-dropdown ul li#navdrop-menu .navdrop-sublinks{
+  overflow: hidden;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+}
+
+li#navdrop-menu .menu-closed{
+  height: 0;
+}
+
+li#navdrop-menu .menu-opened{
+  height: max-content;
+}
+
+#nav-dropdown ul li#navdrop-menu .navdrop-sublinks a.text-link{
+  width:100%;
+  border-top: 1px solid #777;
+  padding: 0.5rem 0 0.5rem calc(7% + 20px);
+}
+/**Code for the Dropdown on small width devices end here**/
+/**Navbar stops**/
+
+
+/**Header showcase starts here and contains the slide and necessary texts**/
+.header-showcase {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background-image: url(./images/mountain.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: changeBackground 5s infinite;
+}
+
+/**This small animation ensures smooth running of the carousel and solve some bugs**/
+@keyframes changeBackground {
+  0%   {background-image: url('./images/mountain.jpg')}
+  50%   {background-image: url('./images/worship7.jpg')}
+  100%   {background-image: url('./images/hope1.jpg')}
+}
+
+.header-showcase .slide-control {
+  display: absolute;
+  font-size: 3rem;
+  color: #fff;
+  z-index: 12;
+}
+
+.header-showcase .prev, .header-showcase .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  color: white;
+  font-size: 1.8rem;
+  font-family: Helvetica, sans-serif;
+  line-height: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0;
+  background-color: transparent;
+  transition: 0.5s all ease;
+}
+
+.header-showcase .prev:hover, .header-showcase .next:hover {
+  background: #fb7777;
+}
+
+.header-showcase .prev {
+  padding :0.5rem 0.7rem 0.5rem 1.5rem;
+  border-radius: 3px 0 0 3px;
+}
+
+.header-showcase .next {
+  right: 0;
+  padding:0.5rem 1.5rem 0.5rem 0.7rem;
+  border-radius: 0 3px 3px 0;
+}
+
+.header-showcase:hover .prev, .header-showcase:hover .next, .header-showcase:hover .dots {
+  opacity: 1;
+}
+
+.header-showcase .dots {
+  position: absolute;
+  width: 100%;
+  bottom: 5%;
+  z-index: 12;
+  opacity: 0;
+  transition: 0.5s all ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-showcase .slide1 {
+  background-image: url(./images/mountain.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: none !important;
+}
+.header-showcase .slide2 {
+  background-image: url(./images/worship7.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: none !important;
+
+}
+.header-showcase .slide3 {
+  background-image: url(./images/hope1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: none !important;
+}
+
+/*** The are the styles for the slides of the home carousel */
+.mySlides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+  /*padding: 4rem 4.5% 30px 4.5%;*/
+  display: none;
+}
+
+/*carousel dot*/
+.dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 0 0.5rem;
+  transition: 0.5s all ease;
+}
+
+/*active carousel dot*/
+.active {
+  height: 8px !important;
+  width: 8px !important;
+  background-color: #fff !important;
+}
+
+/*fade of texts in slide */
+.slidefade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/**Styles for the first slide in the carousel starts**/
+.slide1{
+  position: relative;
+}
+
+.slide1 .header-showcase-text{
+  width: max-content;
+  height: max-content;
+  margin: 60px 0 0 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide1 .header-showcase-text h2{
+  width: max-content;
+  position: relative;
+  font-family: "Archivo Narrow";
+  color: #fff;
+  text-align: left;
+  font-weight:700;
+  font-size: 75px;
+  line-height: 80px;
+}
+
+.slide1 .header-showcase-text #underlined::after{
+  content: '';
+  position: absolute;
+  display: inline-block;
+  bottom:0;
+  left:0;
+  width: 80%;
+  height: 5px;
+  background: linear-gradient(90deg, rgb(252, 180, 120) 0%, rgb(255, 124, 143) 100%);
+}
+
+.slide1 .header-showcase-text .bible-verse{
+  margin-top: 11px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide1 .header-showcase-text .bible-verse h3{
+  font-family: "Archivo Narrow";
+  text-overflow: ellipsis;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.slide1 .header-showcase-text .join-us{
+  margin-top:10px;
+}
+
+.slide1 .header-showcase-text .join-us h3{
+  width: max-content;
+  color: #fff;
+  font-family: "Archivo Narrow";
+  font-weight: 700;
+  text-align: left;
+  font-weight: 400;
+  font-size: 21px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: 0.5s all ease;
+}
+
+.slide1 .header-showcase-text .join-us h3:hover{
+  font-size: 25px;
+  border-bottom: 3px solid #fff;
+}
+
+/**Styles for the first slide in the carousel ends**/
+
+
+/****Styles for the second slide in the carousel starts****/
+.slide2{
+  position:relative;
+}
+
+.slide2 .header-showcase-text-2{
+  width: 100%;
+  height: 100%;
+  /*margin: 110px 0 0 15%;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.slide2 .header-showcase-text-2 h2{
+  width:100%;
+  color: #fb7777;
+  font-weight: 500;
+  font-size: 4rem;
+  font-family: 'Inclusive Sans';
+}
+
+.slide2 .header-showcase-text-2 h3{
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-family: 'Raleway' ,'Inclusive Sans' , sans-serif;
+  margin-top: 20px;
+}
+
+.slide2 .header-showcase-text-2 .buttons{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide2 .header-showcase-text-2 .buttons a button{
+  height: 50px;
+  width: 135px;
+  padding: 0.2rem 0.4rem;
+  font-family: 'Raleway';
+  font-size:0.9rem;
+  color:#000;
+  background-color: #fff;
+  border:0;
+  margin-top: 40px;
+  transition: 0.2s all ease;
+  text-decoration: uppercase;
+}
+
+.slide2 .header-showcase-text-2 .buttons a button.new-here{
+  background-color: #fb7777;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.slide2 .header-showcase-text-2 .buttons a button i.fa{
+  color: #000;
+  margin-right: 10px;
+}
+
+/****Styles for the second slide in the carousel ends****/
+
+
+/******Styles for the third slide in the carousel starts******/
+.slide3{
+  position: relative;
+}
+
+.slide3 .header-showcase-text-3{
+  width: max-content;
+  height: max-content;
+  margin: 110px 0 0 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide3 .header-showcase-text-3 h2{
+  width:100%;
+  color: #fff;
+  font-weight: 500;
+  font-size: 4rem;
+  font-family: 'Inclusive Sans','Open Sans';
+}
+
+.slide3 .header-showcase-text-3 h3{
+  color: #f5f7fa;
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: 'Inclusive Sans' , sans-serif;
+  margin-top: 20px;
+}
+
+.slide3 .header-showcase-text-3 a button{
+  height: 50px;
+  width: 120px;
+  padding: 1rem 0.5rem;
+  font-family: 'Raleway';
+  font-size:0.9rem;
+  color:#fff;
+  background-color: #fb7777;
+  border:0;
+  margin-top: 40px;
+  transition: 0.2s all ease;
+}
+
+.slide3 .header-showcase-text-3 a button:hover{
+  background-color: #eb5151;
+}
+/******Styles for the third slide in the carousel ends******/
+
+/**Header showcase ends here and contains the slide and necessary texts**/
+
+/**Program and Events showcase section starts**/
+.program-events{
+  width:100%;
+  padding: 2rem 18% 2rem 18%;
+  /*background: #364b67;*/
+  display:flex;
+  flex-direction: column;
+}
+
+.program-events h2{
+  color: rgba(0,0,0, 0.9);
+  font-family: 'Poppins' , 'Inclusive Sans' , sans-serif;
+  text-align:center;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.program-events .program-details{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center !important;
+}
+
+.program-events .program-details .program-det{
+  width: 25%;
+  background: transparent;
+  margin-top: 20px;
+  border-right: 2px solid #999;
+}
+
+#program-det-5{
+  border-left: 2px solid #999;
+}
+
+#program-det-4{
+  border-right: 0;
+}
+
+.program-events .program-details .program-det .program-time{
+  color: #000;
+  font-family: 'Poppins' , sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.program-events .program-details .program-det .program-name{
+  color: rgba(0,0,0,0.7);
+  font-family: 'Open Sans' , sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.program-events .program-details .program-det .program-day{
+  color: rgba(0,0,0,0.5);
+  font-family: 'Open Sans' , sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom:10px;
+}
+
+.program-events .event-details{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.program-events .event-details button{
+  margin: 0 auto;
+  height: 45px;
+  width: 130px;
+  background-color: #fb7777;
+  border: 0;
+  color: #fff;
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 1rem;
+  border-radius: 22.5px;
+}
+
+/**Program and Events showcase section ends**/
+
+/*The animation responsible for the slow fade for the text on the slides when the come on*/
+
+.slidefade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/**Slow fade style ends**/
+
+
+/**Program activities a beautiful section of pictures and texts starts**/
+.program-activities{
+  width: 100%;
+  padding: 1rem 4% 1.5rem 4%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center !important;
+}
+
+.program-activities .program-act{
+  position: relative;
+  width: 33%;
+  height: 220px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.program-activities .program-act-1{
+  background-image: url(./images/worship.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.program-activities .program-act-2{
+  background-image: url(./images/giving.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 20px;
+}
+
+.program-activities .program-act-3{
+  background-image: url(./images/worship3.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 20px;
+}
+
+.program-activities .program-act .program-act-text{
+  position: relative;
+  margin: 50px 0 0 25px;
+  display:flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.program-activities .program-act .program-act-text h4{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 500;
+  font-family: 'Oswald' , sans-serif;
+  line-height: 1;
+}
+
+.program-activities .program-act .program-act-text h4 span.highlight{
+  display: inline-block;
+  height:max-content;
+  width:max-content;
+  background: rgb(251, 119, 119);
+  padding: 0 2px 2px 2px !important;
+  line-height:0.9;
+}
+
+.program-act .gradient{
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  top:0;
+  left:0;
+  z-index: 1;
+  background-image: linear-gradient(to top right ,#5CB4BE 0% , #E6445C 50%, #FDBF12 100%);
+  opacity: 0.6;
+}
+
+.program-activities #online-giving.program-act{
+  position: relative;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.program-activities #online-giving.program-act .online-giving-text{
+  z-index:10;
+}
+
+.program-activities #online-giving.program-act .online-giving-text h4{
+  color: #fff;
+  font-size: 60px;
+  font-weight: 500;
+  font-family: 'Oswald' , sans-serif;
+  line-height: 1;
+}
+
+/**Program activities a beautiful section of pictures and texts ends**/
+
+
+/**The large bible verse showcase starts**/
+.major-verse{
+  width: 100%;
+  padding: 3rem 4% 1rem 4%;
+}
+
+.major-verse .inner-major-verse{
+  width:100%;
+  padding: 60px 50px 60px 50px;
+  /*background-color: #f5f7fa;*/
+  border-radius: 14px 14px 14px 14px;
+  box-shadow: 4px 0px 30px 0px rgba(0,0,0,0.5);
+  display:flex;
+  flex-direction: column;
+  background-image: url(./images/biblewhitespace.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -100px;
+}
+
+.major-verse .inner-major-verse h2{
+  text-align: center;
+  color: #132c47;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  line-height: 38px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.major-verse .inner-major-verse h3{
+  color: #181a1c;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 20px;
+}
+/**The large bible verse showcase starts**/
+
+/**Word of Hope section starts**/
+.words-of-hope{
+  width:100%;
+  padding: 3.5rem 4% 3rem 4%; 
+  background-color: #fff;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.words-of-hope .hope-words{
+  width:30%;
+  padding: 60px 50px 60px 50px;
+  background-color: #f5f7fa;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.224);
+  margin-top: 10px;
+}
+
+.words-of-hope .hope-words .heading{
+  display:flex;
+  flex-direction: column;
+}
+
+.words-of-hope .hope-words .heading h2{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  line-height: 38px;
+  font-weight: 700;
+}
+
+.words-of-hope .hope-words .contents{
+  display: flex;
+  flex-direction:column;
+  margin-top: 20px;
+}
+
+.words-of-hope .hope-words .contents h3{
+  /*color: #8a8d91;*/
+  color: #666;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.words-of-hope .hope-words .read-more{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.words-of-hope .hope-words .read-more .read-more-btn{
+  position:relative;
+  height: 60px;
+  width: 150px;
+  background-color: rgba(251, 119, 119, 0.639);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.words-of-hope .hope-words .read-more .read-more-btn p{
+  font-family: 'Roboto', sans-serif;
+  color:#fff;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  z-index: 2;
+}
+
+.words-of-hope .hope-words .read-more .read-more-btn::before{
+  content: '';
+  top:0;
+  left:0;
+  position:absolute;
+  display: inline-block;
+  height:50%;
+  width:0;
+  background-color: #fb7777;
+  transition: 0.3s all ease;
+  z-index:1;
+}
+
+.words-of-hope .hope-words .read-more .read-more-btn::after{
+  content: '';
+  bottom:0;
+  right:0;
+  position:absolute;
+  display: inline-block;
+  height:50%;
+  width:0;
+  background-color: #fb7777;
+  transition: 0.3s all ease;
+  z-index:1;
+}
+
+.words-of-hope .hope-words .read-more .read-more-btn:hover::before, .words-of-hope .hope-words .read-more .read-more-btn:hover::after {
+  width: 100% !important;
+}
+/**Word of Hope section ends**/
+
+/*Footer starts*/
+footer{
+  width:100%;
+  padding: 5rem 4%;
+}
+
+footer .footer-heading a{
+  width:max-content;
+  align-items:center;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+footer .footer-heading a img.footer-logo{
+  height:85px;
+  width:85px;
+}
+
+footer .footer-heading a .footer-logo-text{
+  color: #646464 !important;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.9rem 0;
+}
+
+
+footer .footer-heading a .footer-logo-text h2:first-of-type{
+  margin-top: 0.5rem;
+}
+
+footer .footer-heading a .footer-logo-text h2:last-of-type{
+  margin-bottom: 0.8rem;
+}
+
+footer .copyright{
+  text-align: center;
+  color: rgba(0,0,0, 0.8);
+  font-family: 'Raleway', sans-serif;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+footer .footer-links{
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+footer .footer-links a.fa{
+  color: #646464;
+  margin-left:4rem;
+  font-weight: 400;
+  transition: 0.3s all ease;
+  font-size: 1.2rem;
+}
+
+footer .footer-links a.fa:hover{
+  color: #000;
+}
+
+footer .footer-links a.fa-facebook{
+  margin-left:0 !important;
+}
+/**Footer ends**/
+
+
+/**Fixed whatsapp link at bottom right**/
+.whatsapp-link{
+  display: block;
+  position: fixed;
+  bottom: 8vh;
+  right: 5vw;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  transition: 0.5s all ease;
+  z-index:20;
+}
+
+.whatsapp-link .walink-text{
+  padding: 0.3rem;
+  background-color: #fff;
+  border-radius: 5px 5px 8px 8px;
+  font-size:12px;
+  font-family: Poppins , sans-serif;
+  color: #444;
+  margin-right: 15px;
+}
+
+.whatsapp-link .walink-logo{
+  width:max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.whatsapp-link .walink-logo img{
+  height: 50px;
+}
+
+.whatsapp-link .walink-text .bolded{
+  color: #000;
+  font-weight: 600;
+}
+/**Fixed whatsapp link at bottom right**/
+
+/**** Media query for min- width of 950px*/
+@media (min-width:950px) {
+  header #header-nav .second-nav  #nav-dropdown{
+    height: 0 !important;
+  }
+}
+
+/**** Media query for max-width of 950px****/
+@media (max-width: 950px) {
+    header #header-nav {
+      padding: 0.3rem 4% 0 4%;
+      background-color: #fff !important;
+    }
+    header #header-nav .first-nav{
+      border-bottom: 2px solid #fb7777;
+    }
+
+    header nav .first-nav .navlogo a #logo{
+      height: 70px !important;
+    }
+
+    header nav .first-nav .navright ul{
+      display: none;
+    }
+    header nav .first-nav .navright a.fa{
+      display: inline-block;
+      font-size: 1.5rem;
+    }
+
+    /**Header showcase starts here and contains the slide and necessary texts**/
+    .header-showcase {
+      position: relative;
+      width: 100%;
+      height: 420px;
+    }
+
+    .header-showcase .slide-control {
+      display: absolute;
+      font-size: 3rem;
+      color: #fff;
+      z-index: 12;
+    }
+
+    .header-showcase .prev, .header-showcase .next {
+      top: 50%;
+      margin-top: 0px !important;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      opacity: 1;
+      background:#fb7777 !important;
+    }
+
+
+    .header-showcase .prev {
+      padding :0.5rem 0.7rem 0.5rem 0.9rem;
+    }
+
+    .header-showcase .next {
+      right: 0;
+      padding:0.5rem 0.9rem 0.5rem 0.7rem;
+    }
+
+    .header-showcase .dots {
+      opacity: 1;
+    }
+
+    .header-showcase .slide1 {
+      background-image: url(./images/mountain.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      transition: none !important;
+    }
+    .header-showcase .slide2 {
+      background-image: url(./images/worship7.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      transition: none !important;
+
+    }
+    .header-showcase .slide3 {
+      background-image: url(./images/hope1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      transition: none !important;
+    }
+
+    /*** The are the styles for the slides of the home carousel */
+    .mySlides {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 10;
+      /*padding: 4rem 4.5% 30px 4.5%;*/
+      display: none;
+    }
+
+    /*carousel dot*/
+    .dot {
+      height: 4px;
+      width: 4px;
+      margin: 0 0.5rem;
+    }
+
+    /*active carousel dot*/
+    .active {
+      height: 6px !important;
+      width: 6px !important;
+    }
+
+    /**Styles for the first slide in the carousel starts**/
+    .slide1{
+      position: relative;
+    }
+
+    .slide1 .header-showcase-text{
+      width: max-content;
+      height: max-content;
+      margin: 80px 0 0 15%;
+    }
+
+    .slide1 .header-showcase-text h2{
+      font-weight:600;
+      font-size: 65px;
+      line-height: 65px;
+    }
+
+    .slide1 .header-showcase-text #underlined::after{
+      height: 3px;
+    }
+
+    .slide1 .header-showcase-text .bible-verse{
+      margin-top: 10px;
+    }
+
+    .slide1 .header-showcase-text .bible-verse h3{
+      font-weight: 400;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .slide1 .header-showcase-text .join-us{
+      margin-top:12px;
+    }
+
+    .slide1 .header-showcase-text .join-us h3{
+      font-weight: 400;
+      font-size: 21px !important;
+      border-bottom: 1px solid #fff !important;
+    }
+
+
+    /**Styles for the first slide in the carousel ends**/
+
+
+    /****Styles for the second slide in the carousel starts****/
+    .slide2{
+      position:relative;
+    }
+
+    .slide2 .header-showcase-text-2{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .slide2 .header-showcase-text-2 h2{
+      font-weight: 500;
+      font-size: 3rem;
+      margin-top: 40px;
+    }
+
+    .slide2 .header-showcase-text-2 h3{
+      font-weight: 400;
+      font-size: 1.3rem;
+      margin-top: 20px;
+    }
+
+    .slide2 .header-showcase-text-2 .buttons{
+      width:100%;
+    }
+
+    .slide2 .header-showcase-text-2 .buttons a button{
+      height: 45px;
+      width: 150px;
+      padding: 0.1rem 0.3rem;
+      font-size:01rem;
+      margin-top: 30px;
+    }
+
+    .slide2 .header-showcase-text-2 .buttons a button.new-here{
+      background-color: #fb7777;
+      color: #fff;
+      margin-right: 25px;
+    }
+
+    .slide2 .header-showcase-text-2 .buttons a button i.fa{
+      color: #000;
+      margin-right: 10px;
+    }
+
+    /****Styles for the second slide in the carousel ends****/
+
+
+    /******Styles for the third slide in the carousel starts******/
+    .slide3{
+      position: relative;
+    }
+
+    .slide3 .header-showcase-text-3{
+      width: max-content;
+      height: max-content;
+      margin: 130px 0 0 8%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide3 .header-showcase-text-3 h2{
+      width:100%;
+      font-weight: 500;
+      font-size: 3.2rem;
+    }
+
+    .slide3 .header-showcase-text-3 h3{
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin-top: 25px;
+    }
+
+    .slide3 .header-showcase-text-3 a button{
+      height: 45px;
+      width: 125px;
+      padding: 0.7rem 0.3rem;
+      font-size:1.1rem;
+      background-color: #fb7777 !important;
+      margin-top: 25px;
+    }
+
+    /******Styles for the third slide in the carousel ends******/
+
+    /**Header showcase ends here and contains the slide and necessary texts**/
+
+    /**Program and Events showcase section starts**/
+    .program-events{
+      padding: 1.5rem 10% 1.5rem 10%;
+    }
+
+    .program-events h2{
+      font-weight: 400;
+      font-size: 1.7rem;
+    }
+
+    .program-events .program-details{
+      display:flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .program-events .program-details .program-det{
+      width: 25%;
+      background: transparent;
+      margin-top: 15px;
+      border-right: 2px solid #888;
+    }
+
+    #program-det-4{
+      border-right: 0;
+    }
+
+    .program-events .program-details .program-det .program-time{
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    .program-events .program-details .program-det .program-name{
+      font-size: 1rem;
+      font-weight: 400;
+      margin-top: 5px;
+    }
+
+    .program-events .program-details .program-det .program-day{
+      font-size: 0.85rem;
+      font-weight: 400;
+      margin-top: 10px;
+      margin-bottom:10px;
+    }
+
+    .program-events .event-details{
+      width:100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .program-events .event-details button{
+      margin: 0 auto;
+      height: 45px;
+      width: 140px;
+      background-color: #fb7777;
+      border: 0;
+      color: #fff;
+      font-weight: 400;
+      font-size: 1.00rem;
+      border-radius: 22.5px;
+    }
+
+    /**Program and Events showcase section ends**/
+
+    /**Program activities a beautiful section of pictures and texts starts**/
+    .program-activities{
+      width: 100%;
+      padding: 1.5rem 4% 1.8rem 4%;
+      display:flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap:10px;
+    }
+
+    .program-activities .program-act{
+      position: relative;
+      width: 48%;
+      height: 210px;
+      border-radius: 19px;
+      overflow: hidden;
+    }
+
+    .program-activities .program-act-1{
+      background-image: url(./images/worship.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .program-activities .program-act-2{
+      background-image: url(./images/giving.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-left: 0 !important;
+    }
+
+    .program-activities .program-act-3{
+      background-image: url(./images/worship3.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-left: 0 !important;
+    }
+
+    .program-activities .program-act .program-act-text{
+      margin: 35px 0 0 20px;
+    }
+
+    .program-activities .program-act .program-act-text h4{
+      font-size: 37px;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+
+    .program-activities #online-giving.program-act{
+      position: relative;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .program-activities #online-giving.program-act .online-giving-text{
+      z-index:10;
+    }
+
+    .program-activities #online-giving.program-act .online-giving-text h4{
+      color: #fff;
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    /**Program activities a beautiful section of pictures and texts ends**/
+
+    
+    /**The large bible verse showcase starts**/
+    .major-verse{
+      width: 100%;
+      padding: 2.5rem 4% 1.5rem 4%;
+    }
+
+    .major-verse .inner-major-verse{
+      width:100%;
+      padding: 40px 30px 40px 30px;
+      /*background-color: #f5f7fa;*/
+      border-radius: 15px;
+      box-shadow: 4px 0px 30px 0px rgba(0,0,0,0.5);
+      display:flex;
+      flex-direction: column;
+      background-image: url(./images/biblewhitespace.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .major-verse .inner-major-verse h2{
+      font-size: 34px;
+      line-height: 34px;
+      font-weight: 700;
+    }
+
+    .major-verse .inner-major-verse h3{
+      color: #181a1c;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      font-weight: 400;
+      margin-top: 14px;
+    }
+    /**The large bible verse showcase ends**/
+
+    /**Word of Hope section starts**/
+    .words-of-hope{
+      width:100%;
+      padding: 3rem 4% 2.5rem 4%; 
+      background-color: #fff;
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .words-of-hope .hope-words{
+      width:32%;
+      padding: 40px 30px 40px 30px;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.224);
+      margin-top: 20px;
+    }
+
+    .words-of-hope .hope-words .heading{
+      display:flex;
+      flex-direction: column;
+    }
+
+    .words-of-hope .hope-words .heading h2{
+      font-size: 35px;
+      line-height: 37px;
+      font-weight: 700;
+    }
+
+    .words-of-hope .hope-words .contents{
+      margin-top: 15px;
+    }
+
+    .words-of-hope .hope-words .contents h3{
+      font-size: 15px;
+      line-height: 28px;
+      font-weight: 400;
+    }
+
+    .words-of-hope .hope-words .read-more{
+      margin-top: 16px;
+    }
+
+    .words-of-hope .hope-words .read-more .read-more-btn{
+      height: 50px;
+      width: 135px;
+      background-color: rgba(251, 119, 119, 0.639);
+    }
+
+    .words-of-hope .hope-words .read-more .read-more-btn p{
+      font-size: 15px;
+      line-height: 28px;
+      font-weight: 400;
+      z-index: 2;
+    }
+
+    .words-of-hope .hope-words .read-more .read-more-btn::before{
+      width:100% !important;
+      background-color: #fb7777;
+    }
+
+    .words-of-hope .hope-words .read-more .read-more-btn::after{
+      width: 100% !important;
+      background-color: #fb7777;
+    }
+    /**Word of Hope section ends**/
+
+    /*Footer starts*/
+    footer{
+      width:100%;
+      padding: 2.5rem 4% 3rem 4%;
+    }
+
+    footer .footer-heading a{
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    footer .footer-heading a img.footer-logo{
+      height: 80px;
+      width:80px;
+    }
+
+    footer .footer-heading a .footer-logo-text{
+      font-family: 'Raleway' , 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.9rem 0;
+    }
+
+
+    footer .footer-heading a .footer-logo-text h2:first-of-type{
+      margin-top: 0.5rem;
+    }
+
+    footer .footer-heading a .footer-logo-text h2:last-of-type{
+      margin-bottom: 0.8rem;
+    }
+
+    footer .copyright{
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    footer .footer-links{
+      margin-top: 2.4rem;
+    }
+
+    footer .footer-links a.fa{
+      margin-left:2.5rem;
+      font-weight: 400;
+      transition: 0.3s all ease;
+      font-size: 1.2rem;
+    }
+
+    footer .footer-links a.fa:hover{
+      color: #000;
+    }
+
+    footer .footer-links a.fa-facebook{
+      margin-left:0 !important;
+    }
+    /**Footer ends**/
+  }
+/**** Media query for max-width of 950px****/
+
+
+
+
+
+/**** Media query for max-width of 680px****/
+@media (max-width: 680px) {
+  header #header-nav {
+   padding: 0.2rem 4% 0 4%;
+   background-color: #fff !important;
+ }
+ header #header-nav .first-nav{
+   border-bottom: 2px solid #fb7777;
+ }
+
+ header nav .first-nav .navlogo a #logo{
+   height: 65px !important;
+ }
+
+ header nav .first-nav .navright ul{
+   display: none;
+ }
+ header nav .first-nav .navright a.fa{
+   display: inline-block;
+   font-size: 1.5rem;
+ }
+
+ /**Header showcase starts here and contains the slide and necessary texts**/
+ .header-showcase {
+   position: relative;
+   width: 100%;
+   height: 380px;
+ }
+
+ .header-showcase .slide-control {
+   display: absolute;
+   color: #fff;
+   z-index: 12;
+ }
+
+ .header-showcase .prev, .header-showcase .next {
+   top: 50%;
+   margin-top: 0px !important;
+   font-size: 1.3rem;
+   line-height: 1.3rem;
+   opacity: 1;
+   background:#fb7777 !important;
+ }
+
+
+ .header-showcase .prev {
+   padding :0.5rem 0.7rem 0.5rem 0.7rem;
+ }
+
+ .header-showcase .next {
+   right: 0;
+   padding:0.5rem 0.7rem 0.5rem 0.7rem;
+ }
+
+ .header-showcase .dots {
+   opacity: 1;
+ }
+
+ .header-showcase .slide1 {
+   background-image: url(./images/mountain.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   transition: none !important;
+ }
+ .header-showcase .slide2 {
+   background-image: url(./images/worship7.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   transition: none !important;
+
+ }
+ .header-showcase .slide3 {
+   background-image: url(./images/hope1.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   transition: none !important;
+ }
+
+ /*** The are the styles for the slides of the home carousel */
+ .mySlides {
+   width: 100%;
+   height: 100%;
+   position: relative;
+   z-index: 10;
+   display: none;
+ }
+
+ /*carousel dot*/
+ .dot {
+   height: 4px;
+   width: 4px;
+   margin: 0 0.5rem;
+ }
+
+ /*active carousel dot*/
+ .active {
+   height: 5px !important;
+   width: 5px !important;
+ }
+
+ /**Styles for the first slide in the carousel starts**/
+ .slide1{
+   position: relative;
+ }
+
+ .slide1 .header-showcase-text{
+   width: max-content;
+   height: max-content;
+   margin: 72px 0 0 10%;
+ }
+
+ .slide1 .header-showcase-text h2{
+   font-weight:600;
+   font-size: 55px;
+   line-height: 56px;
+ }
+
+ .slide1 .header-showcase-text #underlined::after{
+   height: 3px;
+ }
+
+ .slide1 .header-showcase-text .bible-verse{
+   margin-top: 13px;
+ }
+
+ .slide1 .header-showcase-text .bible-verse h3{
+   font-weight: 400;
+   font-size: 14px;
+   margin-top: 6px;
+ }
+
+ .slide1 .header-showcase-text .join-us{
+   margin-top:13px;
+ }
+
+ .slide1 .header-showcase-text .join-us h3{
+   font-weight: 400;
+   font-size: 22px !important;
+   border-bottom: 1px solid #fff !important;
+ }
+
+
+ /**Styles for the first slide in the carousel ends**/
+
+
+ /****Styles for the second slide in the carousel starts****/
+ .slide2{
+   position:relative;
+ }
+
+ .slide2 .header-showcase-text-2{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+ }
+
+ .slide2 .header-showcase-text-2 h2{
+   font-weight: 500;
+   font-size: 2.7rem;
+   margin-top: 45px;
+ }
+
+ .slide2 .header-showcase-text-2 h3{
+   font-weight: 400;
+   font-size: 1.1rem;
+   margin-top: 17px;
+ }
+
+ .slide2 .header-showcase-text-2 .buttons{
+   width:100%;
+ }
+
+ .slide2 .header-showcase-text-2 .buttons a button{
+   height: 40px;
+   width: 140px;
+   padding: 0.1rem 0.3rem;
+   font-size:0.9rem;
+   margin-top: 23px;
+ }
+
+ .slide2 .header-showcase-text-2 .buttons a button.new-here{
+   background-color: #fb7777;
+   color: #fff;
+   margin-right: 24px;
+ }
+
+ .slide2 .header-showcase-text-2 .buttons a button i.fa{
+   color: #000;
+   margin-right: 10px;
+ }
+
+ /****Styles for the second slide in the carousel ends****/
+
+
+ /******Styles for the third slide in the carousel starts******/
+ .slide3{
+   position: relative;
+ }
+
+ .slide3 .header-showcase-text-3{
+   width: max-content;
+   height: max-content;
+   margin: 130px 0 0 8%;
+   display: flex;
+   flex-direction: column;
+ }
+
+ .slide3 .header-showcase-text-3 h2{
+   width:100%;
+   font-weight: 500;
+   font-size: 2.9rem;
+ }
+
+ .slide3 .header-showcase-text-3 h3{
+   font-weight: 500;
+   font-size: 1rem;
+   margin-top: 17px;
+ }
+
+ .slide3 .header-showcase-text-3 a button{
+   height: 45px;
+   width: 100px;
+   padding: 0.7rem 0.4rem;
+   font-size:0.9rem;
+   background-color: #fb7777 !important;
+   margin-top: 22px;
+ }
+
+ /******Styles for the third slide in the carousel ends******/
+
+ /**Header showcase ends here and contains the slide and necessary texts**/
+
+ /**Program and Events showcase section starts**/
+ .program-events{
+   padding: 1.2rem 9% 1.2rem 9%;
+ }
+
+ .program-events h2{
+   font-weight: 400;
+   font-size: 1.5rem;
+ }
+
+ .program-events .program-details{
+   display:flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+ }
+
+ .program-events .program-details .program-det{
+   width: 25%;
+   background: transparent;
+   margin-top: 15px;
+   border-right: 1.5px solid #888;
+ }
+
+ #program-det-4{
+   border-right: 0;
+ }
+
+ .program-events .program-details .program-det .program-time{
+   font-size: 1rem;
+   font-weight: 400;
+   margin-top: 10px;
+ }
+
+ .program-events .program-details .program-det .program-name{
+   font-size: 0.9rem;
+   font-weight: 400;
+   margin-top: 5px;
+ }
+
+ .program-events .program-details .program-det .program-day{
+   font-size: 0.85rem;
+   font-weight: 400;
+   margin-top: 10px;
+   margin-bottom:10px;
+ }
+
+ .program-events .event-details{
+   width:100%;
+   display: flex;
+   justify-content: center;
+   margin-top: 22px;
+ }
+
+ .program-events .event-details button{
+   margin: 0 auto;
+   height: 40px;
+   width: 130px;
+   background-color: #fb7777;
+   border: 0;
+   color: #fff;
+   font-weight: 400;
+   font-size: 0.9rem;
+   border-radius: 17.5px;
+ }
+
+ /**Program and Events showcase section ends**/
+
+ /**Program activities a beautiful section of pictures and texts starts**/
+ .program-activities{
+   width: 100%;
+   padding: 1.3rem 3% 1.8rem 3%;
+   display:flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   gap:10px;
+ }
+
+ .program-activities .program-act{
+   position: relative;
+   width: 48%;
+   height: 180px;
+   border-radius: 18px;
+   overflow: hidden;
+   margin-top: 17px;
+ }
+
+ .program-activities .program-act-1{
+   background-image: url(./images/worship.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+
+ .program-activities .program-act-2{
+   background-image: url(./images/giving.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin-left: 0 !important;
+ }
+
+ .program-activities .program-act-3{
+   background-image: url(./images/worship3.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin-left: 0 !important;
+ }
+
+ .program-activities .program-act .program-act-text{
+   margin: 25px 0 0 20px;
+ }
+
+ .program-activities .program-act .program-act-text h4{
+   font-size: 33px;
+   font-weight: 500;
+   line-height: 1.1;
+ }
+
+ .program-activities #online-giving.program-act{
+   position: relative;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .program-activities #online-giving.program-act .online-giving-text{
+   z-index:10;
+ }
+
+ .program-activities #online-giving.program-act .online-giving-text h4{
+   color: #fff;
+   font-size: 42px;
+   font-weight: 500;
+   line-height: 1;
+ }
+
+ /**Program activities a beautiful section of pictures and texts ends**/
+
+
+ /**The large bible verse showcase starts**/
+ .major-verse{
+   width: 100%;
+   padding: 1.8rem 4% 1rem 4%;
+ }
+
+ .major-verse .inner-major-verse{
+   width:100%;
+   padding: 35px 25px 35px 25px;
+   /*background-color: #f5f7fa;*/
+   border-radius: 13px;
+   box-shadow: 4px 0px 30px 0px rgba(0,0,0,0.5);
+   display:flex;
+   flex-direction: column;
+   background-image: url(./images/biblewhitespace.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+ }
+
+ .major-verse .inner-major-verse h2{
+   font-size: 31px;
+   line-height: 33px;
+   font-weight: 700;
+ }
+
+ .major-verse .inner-major-verse h3{
+   font-size: 15px;
+   font-weight: 600;
+   line-height: 24px;
+   font-weight: 400;
+   margin-top: 16px;
+ }
+ /**The large bible verse showcase ends**/
+
+ /**Word of Hope section starts**/
+ .words-of-hope{
+   width:100%;
+   padding: 3.5rem 4% 2.5rem 4%; 
+   background-color: #fff;
+   display:flex;
+   flex-direction: row;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 10px;
+ }
+
+ .words-of-hope .hope-words{
+   width:48%;
+   padding: 30px 20px 30px 20px;
+   box-shadow: 0 0 1px rgba(0, 0, 0, 0.224);
+   margin-top: 15px;
+ }
+
+ .words-of-hope .hope-words .heading{
+   display:flex;
+   flex-direction: column;
+ }
+
+ .words-of-hope .hope-words .heading h2{
+   font-size: 32px;
+   line-height: 34px;
+   font-weight: 700;
+ }
+
+ .words-of-hope .hope-words .contents{
+   margin-top: 20px;
+ }
+
+ .words-of-hope .hope-words .contents h3{
+   font-size: 15px;
+   line-height: 28px;
+   font-weight: 400;
+ }
+
+ .words-of-hope .hope-words .read-more{
+   margin-top: 18px;
+ }
+
+ .words-of-hope .hope-words .read-more .read-more-btn{
+   height: 45px;
+   width: 120px;
+   background-color: rgba(251, 119, 119, 0.639);
+ }
+
+ .words-of-hope .hope-words .read-more .read-more-btn p{
+   font-size: 15px;
+   line-height: 25px;
+   font-weight: 400;
+   z-index: 2;
+ }
+
+ .words-of-hope .hope-words .read-more .read-more-btn::before{
+   width:100% !important;
+   background-color: #fb7777;
+ }
+
+ .words-of-hope .hope-words .read-more .read-more-btn::after{
+   width: 100% !important;
+   background-color: #fb7777;
+ }
+ /**Word of Hope section ends**/
+
+ /*Footer starts*/
+ footer{
+   width:100%;
+   padding: 1.5rem 4% 2rem 4%;
+ }
+
+ footer .footer-heading a{
+   display: flex;
+   flex-wrap: nowrap;
+ }
+
+ footer .footer-heading a img.footer-logo{
+   height: 68px;
+   width:68px;
+ }
+
+ footer .footer-heading a .footer-logo-text{
+   font-family: 'Raleway' , 'Montserrat', sans-serif;
+   font-size: 0.75rem;
+   font-weight: 600;
+   padding: 0.9rem 0;
+ }
+
+
+ footer .footer-heading a .footer-logo-text h2:first-of-type{
+   margin-top: 0.4rem;
+ }
+
+ footer .footer-heading a .footer-logo-text h2:last-of-type{
+   margin-bottom: 0.8rem;
+ }
+
+ footer .copyright{
+   margin-top: 1.2rem;
+   font-size: 1rem;
+ }
+
+ footer .footer-links{
+   margin-top: 2.4rem;
+ }
+
+ footer .footer-links a.fa{
+   margin-left:2rem;
+   font-weight: 400;
+   font-size: 1.2rem;
+ }
+
+ footer .footer-links a.fa:hover{
+   color: #000;
+ }
+
+ footer .footer-links a.fa-facebook{
+   margin-left:0 !important;
+ }
+/**Footer ends**/
+
+/**Fixed whatsapp link at bottom right**/
+  .whatsapp-link{
+    bottom: 10vh !important;
+    right: 3vw;
+  }
+
+  .whatsapp-link .walink-text{
+    padding: 0.2rem;
+    border-radius: 3px 3px 6px 6px;
+    font-size:10px;
+    margin-right: 8px;
+  }
+
+  .whatsapp-link .walink-logo{
+    width:max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .whatsapp-link .walink-logo img{
+    height: 40px;
+  }
+
+  .whatsapp-link .walink-text .bolded{
+    color: #000;
+    font-weight: 600;
+  }
+/**Fixed whatsapp link at bottom right**/
+}
+/**** Media query for max-width of 680px****/
+
+
+
+/**** Media query for max-width of 500px****/
+@media (max-width: 500px) {
+  header #header-nav {
+    padding: 0.2rem 4% 0 4%;
+    background-color: #fff !important;
+  }
+  header #header-nav .first-nav{
+    border-bottom: 1px solid #fb7777;
+  }
+
+  header nav .first-nav .navlogo a #logo{
+    height: 65px !important;
+  }
+
+  header nav .first-nav .navright ul{
+    display: none;
+  }
+  header nav .first-nav .navright a.fa{
+    display: inline-block;
+    font-size: 1.3rem;
+  }
+
+
+ /**Code for the Dropdown on small width devices start here**/
+  header #header-nav .second-nav #nav-dropdown{
+    position:relative;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  #nav-dropdown{
+    height: 0;
+  }
+
+  header .nav-closed{
+    height: 0 !important;
+  }
+
+  header .nav-opened{
+    height: max-content !important;
+  }
+
+
+  header #header-nav .second-nav #nav-dropdown ul{
+    display:flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+
+  #nav-dropdown ul li{
+    width: 100%;
+    border-top: 1px solid #777;
+    padding: 0.5rem 5%;
+  }
+
+  #nav-dropdown ul li:last-of-type{
+    border-bottom: 1px solid #fb7777;
+  }
+
+  #nav-dropdown ul li a{
+    color: #444;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  #nav-dropdown ul li a:focus{
+    color: #fb7777;
+  }
+
+  #nav-dropdown ul li#navdrop-menu{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-mainlink{
+    width:100%;
+    padding: 0.5rem 0 0.5rem 5%;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-mainlink i.fa{
+    font-size: 0.9rem;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-sublinks{
+    overflow: hidden;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+  }
+
+  li#navdrop-menu .menu-closed{
+    height: 0;
+  }
+
+  li#navdrop-menu .menu-opened{
+    height: max-content;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-sublinks a.text-link{
+    width:100%;
+    border-top: 1px solid #777;
+    padding: 0.5rem 0 0.5rem calc(7% + 20px);
+  }
+/**Code for the Dropdown on small width devices end here**/
+
+ /**Header showcase starts here and contains the slide and necessary texts**/
+ .header-showcase {
+   position: relative;
+   width: 100%;
+   height: 340px;
+ }
+
+ .header-showcase .slide-control {
+   display: absolute;
+   color: #fff;
+   z-index: 12;
+ }
+
+ .header-showcase .prev, .header-showcase .next {
+   top: 50%;
+   margin-top: 0px !important;
+   font-size: 1rem;
+   line-height: 1rem;
+   opacity: 1;
+   background:#fb7777 !important;
+ }
+
+
+ .header-showcase .prev {
+   padding :0.5rem 0.5rem 0.5rem 0.5rem;
+ }
+
+ .header-showcase .next {
+   right: 0;
+   padding:0.5rem 0.5rem 0.5rem 0.5rem;
+ }
+
+ .header-showcase .dots {
+   opacity: 1;
+ }
+
+ .header-showcase .slide1 {
+   background-image: url(./images/mountain.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   transition: none !important;
+ }
+ .header-showcase .slide2 {
+   background-image: url(./images/worship7.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   transition: none !important;
+
+ }
+ .header-showcase .slide3 {
+   background-image: url(./images/hope1.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   transition: none !important;
+ }
+
+ /*** The are the styles for the slides of the home carousel */
+ .mySlides {
+   width: 100%;
+   height: 100%;
+   position: relative;
+   z-index: 10;
+   display: none;
+ }
+
+ /*carousel dot*/
+ .dot {
+   height: 3px;
+   width: 3px;
+   margin: 0 0.5rem;
+ }
+
+ /*active carousel dot*/
+ .active {
+   height: 4px !important;
+   width: 4px !important;
+ }
+
+ /**Styles for the first slide in the carousel starts**/
+ .slide1{
+   position: relative;
+ }
+
+ .slide1 .header-showcase-text{
+   width: max-content;
+   height: max-content;
+   margin: 72px 0 0 8%;
+ }
+
+ .slide1 .header-showcase-text h2{
+   font-weight:600;
+   font-size: 48px;
+   line-height: 46px;
+ }
+
+ .slide1 .header-showcase-text #underlined::after{
+   height: 2px;
+ }
+
+ .slide1 .header-showcase-text .bible-verse{
+   margin-top: 10px;
+ }
+
+ .slide1 .header-showcase-text .bible-verse h3{
+   font-weight: 400;
+   font-size: 12px;
+   margin-top: 6px;
+ }
+
+ .slide1 .header-showcase-text .join-us{
+   margin-top:10px;
+ }
+
+ .slide1 .header-showcase-text .join-us h3{
+   font-weight: 400;
+   font-size: 17px !important;
+   border-bottom: 1px solid #fff !important;
+ }
+
+
+ /**Styles for the first slide in the carousel ends**/
+
+
+ /****Styles for the second slide in the carousel starts****/
+ .slide2{
+   position:relative;
+ }
+
+ .slide2 .header-showcase-text-2{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+ }
+
+ .slide2 .header-showcase-text-2 h2{
+   font-weight: 500;
+   font-size: 2.2rem;
+   margin-top: 30px;
+ }
+
+ .slide2 .header-showcase-text-2 h3{
+   font-weight: 400;
+   font-size: 1.1rem;
+   margin-top: 12px;
+ }
+
+ .slide2 .header-showcase-text-2 .buttons{
+   width:100%;
+ }
+
+ .slide2 .header-showcase-text-2 .buttons a button{
+   height: 30px;
+   width: 125px;
+   padding: 0.1rem 0.3rem;
+   font-size:0.9rem;
+   margin-top: 20px;
+ }
+
+ .slide2 .header-showcase-text-2 .buttons a button.new-here{
+   background-color: #fb7777;
+   color: #fff;
+   margin-right: 15px;
+ }
+
+ .slide2 .header-showcase-text-2 .buttons a button i.fa{
+   color: #000;
+   margin-right: 10px;
+ }
+
+ /****Styles for the second slide in the carousel ends****/
+
+
+ /******Styles for the third slide in the carousel starts******/
+ .slide3{
+   position: relative;
+ }
+
+ .slide3 .header-showcase-text-3{
+   width: max-content;
+   height: max-content;
+   margin: 110px 20px 0 7%;
+   display: flex;
+   flex-direction: column;
+ }
+
+ .slide3 .header-showcase-text-3 h2{
+   width:100%;
+   font-weight: 500;
+   font-size: 2.3rem;
+ }
+
+ .slide3 .header-showcase-text-3 h3{
+   font-weight: 500;
+   font-size: 0.9rem;
+   margin-top: 20px;
+ }
+
+ .slide3 .header-showcase-text-3 a button{
+   height: 43px;
+   width: 100px;
+   padding: 0.7rem 0.3rem;
+   font-size:0.9rem;
+   background-color: #fb7777 !important;
+   margin-top: 20px;
+ }
+
+ /******Styles for the third slide in the carousel ends******/
+
+ /**Header showcase ends here and contains the slide and necessary texts**/
+
+ /**Program and Events showcase section starts**/
+ .program-events{
+   padding: 1.2rem 3% 1.2rem 3%;
+ }
+
+ .program-events h2{
+   font-weight: 400;
+   font-size: 1.2rem;
+ }
+
+ .program-events .program-details{
+   display:flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   /**justify-content: space-between;**/
+ }
+
+ .program-events .program-details .program-det{
+   min-width: 33%;
+   max-width: 33%;
+   background: transparent;
+   margin-top: 15px;
+   border-right: 1.5px solid #888;
+ }
+
+ #program-det-3{
+  border-right:0;
+ }
+
+ #program-det-4{
+  border-right: 1.5px solid #888;
+ }
+
+  #program-det-5{
+    border-left:0;
+  }
+
+  #program-det-6{
+    border-right:0;
+  }
+
+ .program-events .program-details .program-det .program-time{
+   font-size: 1rem;
+   font-weight: 400;
+   margin-top: 10px;
+ }
+
+ .program-events .program-details .program-det .program-name{
+   font-size: 0.9rem;
+   font-weight: 400;
+   margin-top: 5px;
+ }
+
+ .program-events .program-details .program-det .program-day{
+   font-size: 0.8rem;
+   font-weight: 400;
+   margin-top: 10px;
+   margin-bottom:10px;
+ }
+
+ .program-events .event-details{
+   width:100%;
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+ }
+
+ .program-events .event-details button{
+   margin: 0 auto;
+   height: 40px;
+   width: 125px;
+   background-color: #fb7777;
+   border: 0;
+   color: #fff;
+   font-weight: 400;
+   font-size: 0.9rem;
+   border-radius: 20px;
+ }
+
+ /**Program and Events showcase section ends**/
+
+ /**Program activities a beautiful section of pictures and texts starts**/
+ .program-activities{
+   width: 100%;
+   padding: 1rem 10% 1.5rem 10%;
+   display:flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap:8px;
+ }
+
+ .program-activities .program-act{
+   position: relative;
+   width: 100%;
+   height: 180px;
+   border-radius: 14px;
+   overflow: hidden;
+   margin-top: 13px;
+ }
+
+ .program-activities .program-act-1{
+   background-image: url(./images/worship.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+
+ .program-activities .program-act-2{
+   background-image: url(./images/giving.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin-left: 0 !important;
+ }
+
+ .program-activities .program-act-3{
+   background-image: url(./images/worship3.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin-left: 0 !important;
+ }
+
+ .program-activities .program-act .program-act-text{
+   margin: 25px 0 0 20px;
+ }
+
+ .program-activities .program-act .program-act-text h4{
+   font-size: 34px;
+   font-weight: 500;
+   line-height: 1.2;
+ }
+
+ .program-activities #online-giving.program-act{
+   position: relative;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .program-activities #online-giving.program-act .online-giving-text{
+   z-index:10;
+ }
+
+ .program-activities #online-giving.program-act .online-giving-text h4{
+   color: #fff;
+   font-size: 40px;
+   font-weight: 500;
+   line-height: 1;
+ }
+
+ /**Program activities a beautiful section of pictures and texts ends**/
+
+
+ /**The large bible verse showcase starts**/
+ .major-verse{
+   width: 100%;
+   padding: 1.4rem 4% 0.8rem 4%;
+ }
+
+ .major-verse .inner-major-verse{
+   width:100%;
+   padding: 25px 15px 25px 15px;
+   /*background-color: #f5f7fa;*/
+   border-radius: 10px;
+   box-shadow: 2px 0px 20px 0px rgba(0,0,0,0.5);
+   display:flex;
+   flex-direction: column;
+   background-image: url(./images/biblewhitespace.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+ }
+
+ .major-verse .inner-major-verse h2{
+   font-size: 28px;
+   line-height: 30px;
+   font-weight: 700;
+ }
+
+ .major-verse .inner-major-verse h3{
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 20px;
+   font-weight: 400;
+   margin-top: 12px;
+ }
+ /**The large bible verse showcase ends**/
+
+ /**Word of Hope section starts**/
+ .words-of-hope{
+   width:100%;
+   padding: 2.5rem 10% 2rem 10%; 
+   background-color: #fff;
+   display:flex;
+   flex-direction: row;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap:0;
+ }
+
+ .words-of-hope .hope-words{
+   width:98%;
+   padding: 35px 25px 35px 25px;
+   box-shadow: 0 0 1px rgba(0, 0, 0, 0.224);
+   margin-top: 25px;
+ }
+
+ .words-of-hope .hope-words .heading{
+   display:flex;
+   flex-direction: column;
+ }
+
+ .words-of-hope .hope-words .heading h2{
+   font-size: 32px;
+   line-height: 33px;
+   font-weight: 700;
+ }
+
+ .words-of-hope .hope-words .contents{
+   margin-top: 22px;
+ }
+
+ .words-of-hope .hope-words .contents h3{
+   font-size: 15px;
+   line-height: 26px;
+   font-weight: 400;
+ }
+
+ .words-of-hope .hope-words .read-more{
+   margin-top: 20px;
+ }
+
+ .words-of-hope .hope-words .read-more .read-more-btn{
+   height: 50px;
+   width: 135px;
+   background-color: rgba(251, 119, 119, 0.639);
+ }
+
+ .words-of-hope .hope-words .read-more .read-more-btn p{
+   font-size: 15px;
+   line-height: 24px;
+   font-weight: 400;
+   z-index: 2;
+ }
+
+ .words-of-hope .hope-words .read-more .read-more-btn::before{
+   width:100% !important;
+   background-color: #fb7777;
+ }
+
+ .words-of-hope .hope-words .read-more .read-more-btn::after{
+   width: 100% !important;
+   background-color: #fb7777;
+ }
+ /**Word of Hope section ends**/
+
+ /*Footer starts*/
+ footer{
+   width:100%;
+   padding: 1.5rem 4% 2rem 4%;
+ }
+
+ footer .footer-heading a{
+   display: flex;
+   flex-wrap: nowrap;
+ }
+
+ footer .footer-heading a img.footer-logo{
+   height:60px;
+   width:auto;
+ }
+
+ footer .footer-heading a .footer-logo-text{
+   font-family: 'Raleway' , 'Montserrat', sans-serif;
+   font-size: 0.7rem;
+   font-weight: 600;
+   padding: 0.9rem 0;
+ }
+
+
+ footer .footer-heading a .footer-logo-text h2:first-of-type{
+   margin-top: 0.3rem;
+ }
+
+ footer .footer-heading a .footer-logo-text h2:last-of-type{
+   margin-bottom: 0.7rem;
+ }
+
+ footer .copyright{
+   margin-top: 1rem;
+   font-size: 0.9rem;
+ }
+
+ footer .footer-links{
+   margin-top: 2rem;
+ }
+
+ footer .footer-links a.fa{
+   margin-left:1.8rem;
+   font-weight: 400;
+   font-size: 1rem;
+ }
+
+ footer .footer-links a.fa:hover{
+   color: #000;
+ }
+
+ footer .footer-links a.fa-facebook{
+   margin-left:0 !important;
+ }
+/**Footer ends**/
+
+/**Fixed whatsapp link at bottom right**/
+  .whatsapp-link{
+    bottom: 10vh;
+    right: 3vw;
+  }
+
+  .whatsapp-link .walink-text{
+    padding: 0.2rem;
+    border-radius: 3px 3px 6px 6px;
+    font-size:10px;
+    margin-right: 8px;
+  }
+
+  .whatsapp-link .walink-logo{
+    width:max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .whatsapp-link .walink-logo img{
+    height: 40px;
+  }
+
+  .whatsapp-link .walink-text .bolded{
+    color: #000;
+    font-weight: 600;
+  }
+/**Fixed whatsapp link at bottom right**/
+}
+/**** Media query for max-width of 500px****/
+
+
+
+/**** Media query for max-width of 310px****/
+@media (max-width: 310px) {
+
+  header #header-nav {
+    padding: 0.2rem 4% 0 4%;
+    background-color: #fff !important;
+  }
+
+  header #header-nav .first-nav{
+    border-bottom: 1px solid #fb7777;
+  }
+
+  header nav .first-nav .navlogo a #logo{
+    height: 55px !important;
+  }
+
+  header nav .first-nav .navright ul{
+    display: none;
+  }
+  header nav .first-nav .navright a.fa{
+    display: inline-block;
+    font-size: 1.2rem;
+  }
+
+
+ /**Code for the Dropdown on small width devices start here**/
+  header #header-nav .second-nav #nav-dropdown{
+    position:relative;
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  #nav-dropdown{
+    height: 0;
+  }
+
+  header .nav-closed{
+    height: 0 !important;
+  }
+
+  header .nav-opened{
+    height: max-content !important;
+  }
+
+
+  header #header-nav .second-nav #nav-dropdown ul{
+    display:flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+
+  #nav-dropdown ul li{
+    width: 100%;
+    border-top: 1px solid #777;
+    padding: 0.5rem 5%;
+  }
+
+  #nav-dropdown ul li:last-of-type{
+    border-bottom: 1px solid #fb7777;
+  }
+
+  #nav-dropdown ul li a{
+    color: #444;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  #nav-dropdown ul li a:hover{
+    color: #fb7777;
+  }
+
+  #nav-dropdown ul li#navdrop-menu{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-mainlink{
+    width:100%;
+    padding: 0.5rem 0 0.5rem 5%;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-mainlink i.fa{
+    font-size: 0.8rem;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-sublinks{
+    overflow: hidden;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+  }
+
+  li#navdrop-menu .menu-closed{
+    height: 0;
+  }
+
+  li#navdrop-menu .menu-opened{
+    height: max-content;
+  }
+
+  #nav-dropdown ul li#navdrop-menu .navdrop-sublinks a.text-link{
+    width:100%;
+    border-top: 1px solid #777;
+    padding: 0.5rem 0 0.5rem calc(7% + 20px);
+  }
+/**Code for the Dropdown on small width devices end here**/
+
+ /**Header showcase starts here and contains the slide and necessary texts**/
+ .header-showcase {
+   position: relative;
+   width: 100%;
+   height: 310px;
+ }
+
+ .header-showcase .slide-control {
+   display: absolute;
+   color: #fff;
+   z-index: 12;
+ }
+
+ .header-showcase .prev, .header-showcase .next {
+   top: 50%;
+   margin-top: 0px !important;
+   font-size: 0.9rem;
+   line-height: 1rem;
+   border-radius: 0 2px 2px 0;
+   opacity: 1;
+   background:#fb7777 !important;
+ }
+
+
+ .header-showcase .prev {
+   padding :0.3rem !important;
+ }
+
+ .header-showcase .next {
+   right: 0;
+   padding:0.3rem !important;
+ }
+
+ .header-showcase .dots {
+   opacity: 1;
+ }
+
+ .header-showcase .slide1 {
+   background-image: url(./images/mountain.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   transition: none !important;
+ }
+ .header-showcase .slide2 {
+   background-image: url(./images/worship7.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   transition: none !important;
+
+ }
+ .header-showcase .slide3 {
+   background-image: url(./images/hope1.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   transition: none !important;
+ }
+
+ /*** The are the styles for the slides of the home carousel */
+ .mySlides {
+   width: 100%;
+   height: 100%;
+   position: relative;
+   z-index: 10;
+   display: none;
+ }
+
+ /*carousel dot*/
+ .dot {
+   height: 3px;
+   width: 3px;
+   margin: 0 0.5rem;
+ }
+
+ /*active carousel dot*/
+ .active {
+   height: 4px !important;
+   width: 4px !important;
+ }
+
+ /**Styles for the first slide in the carousel starts**/
+ .slide1{
+   position: relative;
+ }
+
+ .slide1 .header-showcase-text{
+   width: max-content;
+   height: max-content;
+   margin: 62px 0 0 8%;
+ }
+
+ .slide1 .header-showcase-text h2{
+   font-weight:600;
+   font-size: 43px;
+   line-height: 45px;
+ }
+
+ .slide1 .header-showcase-text #underlined::after{
+   height: 2px;
+ }
+
+ .slide1 .header-showcase-text .bible-verse{
+   margin-top: 7px;
+ }
+
+ .slide1 .header-showcase-text .bible-verse h3{
+   font-weight: 400;
+   font-size: 11px;
+   margin-top: 4px;
+ }
+
+ .slide1 .header-showcase-text .join-us{
+   margin-top:7px;
+ }
+
+ .slide1 .header-showcase-text .join-us h3{
+   font-weight: 400;
+   font-size: 16px !important;
+   border-bottom: 1px solid #fff !important;
+ }
+
+
+ /**Styles for the first slide in the carousel ends**/
+
+
+ /****Styles for the second slide in the carousel starts****/
+ .slide2{
+   position:relative;
+ }
+
+ .slide2 .header-showcase-text-2{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+ }
+
+ .slide2 .header-showcase-text-2 h2{
+   font-weight: 500;
+   font-size: 1.8rem;
+   margin-top: 35px;
+ }
+
+ .slide2 .header-showcase-text-2 h3{
+   font-weight: 400;
+   font-size: 1rem;
+   margin-top: 12px;
+ }
+
+ .slide2 .header-showcase-text-2 .buttons{
+   width:100%;
+ }
+
+ .slide2 .header-showcase-text-2 .buttons a button{
+   height: 28px;
+   width: 110px;
+   padding: 0.1rem 0.2rem;
+   font-size:0.85rem;
+   margin-top: 16px;
+ }
+
+ .slide2 .header-showcase-text-2 .buttons a button.new-here{
+   background-color: #fb7777;
+   color: #fff;
+   margin-right: 15px;
+ }
+
+ .slide2 .header-showcase-text-2 .buttons a button i.fa{
+   color: #000;
+   margin-right: 4px;
+ }
+
+ /****Styles for the second slide in the carousel ends****/
+
+
+ /******Styles for the third slide in the carousel starts******/
+ .slide3{
+   position: relative;
+ }
+
+ .slide3 .header-showcase-text-3{
+   width: max-content;
+   height: max-content;
+   margin: 95px 20px 0 7%;
+   display: flex;
+   flex-direction: column;
+ }
+
+ .slide3 .header-showcase-text-3 h2{
+   width:100%;
+   font-weight: 500;
+   font-size: 1.8rem;
+ }
+
+ .slide3 .header-showcase-text-3 h3{
+   font-weight: 500;
+   font-size: 0.8rem;
+   margin-top: 18px;
+ }
+
+ .slide3 .header-showcase-text-3 a button{
+   height: 37px;
+   width: 100px;
+   padding: 0.3rem 0.15rem;
+   font-size:0.8rem;
+   background-color: #fb7777 !important;
+   margin-top: 15px;
+ }
+
+ /******Styles for the third slide in the carousel ends******/
+
+ /**Header showcase ends here and contains the slide and necessary texts**/
+
+ /**Program and Events showcase section starts**/
+ .program-events{
+   padding: 1.2rem 5% 1.2rem 5%;
+ }
+
+ .program-events h2{
+   font-weight: 400;
+   font-size: 1.2rem;
+ }
+
+ .program-events .program-details{
+   display:flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   /**justify-content: space-between;**/
+ }
+
+ .program-events .program-details .program-det{
+   min-width: 33%;
+   max-width: 33%;
+   background: transparent;
+   margin-top: 15px;
+   border-right: 1px solid #888;
+ }
+
+ #program-det-3{
+  border-right:0;
+ }
+
+ #program-det-4{
+  border-right: 1px solid #888;
+ }
+
+  #program-det-5{
+  border-left:0;
+  }
+
+  #program-det-6{
+  border-right:0;
+  }
+
+ .program-events .program-details .program-det .program-time{
+   font-size: 0.85rem;
+   font-weight: 400;
+   margin-top: 10px;
+ }
+
+ .program-events .program-details .program-det .program-name{
+   font-size: 0.75rem;
+   font-weight: 400;
+   margin-top: 5px;
+ }
+
+ .program-events .program-details .program-det .program-day{
+   font-size: 0.7rem;
+   font-weight: 400;
+   margin-top: 10px;
+   margin-bottom:10px;
+ }
+
+ .program-events .event-details{
+   width:100%;
+   display: flex;
+   justify-content: center;
+   margin-top: 15px;
+ }
+
+ .program-events .event-details button{
+   margin: 0 auto;
+   height: 35px;
+   width: 110px;
+   background-color: #fb7777;
+   border: 0;
+   color: #fff;
+   font-weight: 400;
+   font-size: 0.8rem;
+   border-radius: 17.5px;
+ }
+
+ /**Program and Events showcase section ends**/
+
+ /**Program activities a beautiful section of pictures and texts starts**/
+ .program-activities{
+   width: 100%;
+   padding: 1rem 7% 1.5rem 7%;
+   display:flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap:8px;
+ }
+
+ .program-activities .program-act{
+   position: relative;
+   width: 100%;
+   height: 160px;
+   border-radius: 14px;
+   overflow: hidden;
+   margin-top: 15px;
+ }
+
+ .program-activities .program-act-1{
+   background-image: url(./images/worship.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+
+ .program-activities .program-act-2{
+   background-image: url(./images/giving.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin-left: 0 !important;
+ }
+
+ .program-activities .program-act-3{
+   background-image: url(./images/worship3.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin-left: 0 !important;
+ }
+
+ .program-activities .program-act .program-act-text{
+   margin: 20px 0 0 15px;
+ }
+
+ .program-activities .program-act .program-act-text h4{
+   font-size: 29px;
+   font-weight: 500;
+   line-height: 1.2;
+ }
+
+ .program-activities #online-giving.program-act{
+   position: relative;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .program-activities #online-giving.program-act .online-giving-text{
+   z-index:10;
+ }
+
+ .program-activities #online-giving.program-act .online-giving-text h4{
+   color: #fff;
+   font-size: 35px;
+   font-weight: 500;
+   line-height: 1.2;
+ }
+
+ /**Program activities a beautiful section of pictures and texts ends**/
+
+
+ /**The large bible verse showcase starts**/
+ .major-verse{
+   width: 100%;
+   padding: 1.5rem 4% 1rem 4%;
+ }
+
+ .major-verse .inner-major-verse{
+   width:100%;
+   padding: 20px 10px 20px 10px;
+   /*background-color: #f5f7fa;*/
+   border-radius: 6px;
+   box-shadow: 2px 0px 15px 0px rgba(0,0,0,0.5);
+   display:flex;
+   flex-direction: column;
+   background-image: url(./images/biblewhitespace.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+ }
+
+ .major-verse .inner-major-verse h2{
+   font-size: 25px;
+   line-height: 25px;
+   font-weight: 700;
+ }
+
+ .major-verse .inner-major-verse h3{
+   font-size: 12px;
+   font-weight: 600;
+   line-height: 18px;
+   font-weight: 400;
+   margin-top: 12px;
+ }
+ /**The large bible verse showcase ends**/
+
+ /**Word of Hope section starts**/
+ .words-of-hope{
+   width:100%;
+   padding: 2rem 5% 1.5rem 5%; 
+   background-color: #fff;
+   display:flex;
+   flex-direction: row;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap:0;
+ }
+
+ .words-of-hope .hope-words{
+   width:98%;
+   padding: 25px 13px 25px 13px;
+   box-shadow: 0 0 1px rgba(0, 0, 0, 0.224);
+   margin-top: 20px;
+ }
+
+ .words-of-hope .hope-words .heading{
+   display:flex;
+   flex-direction: column;
+ }
+
+ .words-of-hope .hope-words .heading h2{
+   font-size: 30px;
+   line-height: 30px;
+   font-weight: 700;
+ }
+
+ .words-of-hope .hope-words .contents{
+   margin-top: 22px;
+ }
+
+ .words-of-hope .hope-words .contents h3{
+   font-size: 14px;
+   line-height: 24px;
+   font-weight: 400;
+ }
+
+ .words-of-hope .hope-words .read-more{
+   margin-top: 20px;
+ }
+
+ .words-of-hope .hope-words .read-more .read-more-btn{
+   height: 45px;
+   width: 120px;
+   background-color: rgba(251, 119, 119, 0.639);
+ }
+
+ .words-of-hope .hope-words .read-more .read-more-btn p{
+   font-size: 14px;
+   line-height: 24px;
+   font-weight: 400;
+   z-index: 2;
+ }
+
+ .words-of-hope .hope-words .read-more .read-more-btn::before{
+   width:100% !important;
+   background-color: #fb7777;
+ }
+
+ .words-of-hope .hope-words .read-more .read-more-btn::after{
+   width: 100% !important;
+   background-color: #fb7777;
+ }
+ /**Word of Hope section ends**/
+
+ /*Footer starts*/
+ footer{
+   width:100%;
+   padding: 1rem 4% 1.5rem 4%;
+ }
+
+ footer .footer-heading a{
+   display: flex;
+   flex-wrap: nowrap;
+ }
+
+ footer .footer-heading a img.footer-logo{
+   height: 51px;
+   width: 51px;
+ }
+
+ footer .footer-heading a .footer-logo-text{
+   font-family: 'Raleway' , 'Montserrat', sans-serif;
+   font-size: 0.65rem;
+   font-weight: 600;
+   padding: 0.9rem 0;
+ }
+
+
+ footer .footer-heading a .footer-logo-text h2:first-of-type{
+   margin-top: 0.25rem;
+ }
+
+ footer .footer-heading a .footer-logo-text h2:last-of-type{
+   margin-bottom: 0.5rem;
+ }
+
+ footer .copyright{
+   margin-top: 1rem;
+   font-size: 0.9rem;
+ }
+
+ footer .footer-links{
+   margin-top: 1.5rem;
+ }
+
+ footer .footer-links a.fa{
+   margin-left:1.3rem;
+   font-weight: 400;
+   font-size: 0.9rem;
+ }
+
+ footer .footer-links a.fa:hover{
+   color: #000;
+ }
+
+ footer .footer-links a.fa-facebook{
+   margin-left:0 !important;
+ }
+/**Footer ends**/
+
+/**Fixed whatsapp link at bottom right**/
+
+  .whatsapp-link .walink-text{
+    padding: 0.2rem;
+    border-radius: 3px 3px 6px 6px;
+    font-size:9px;
+    margin-right: 7px;
+  }
+
+  .whatsapp-link .walink-logo{
+    width:max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .whatsapp-link .walink-logo img{
+    height: 30px;
+  }
+
+  .whatsapp-link .walink-text .bolded{
+    color: #000;
+    font-weight: 600;
+  }
+/**Fixed whatsapp link at bottom right**/
+}
+/**** Media query for max-width of 310px****/

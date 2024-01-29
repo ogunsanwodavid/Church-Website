@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!--META TAGS-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="DAVE">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+
+        <title>Template for evry blog page</title>
+
+        <!--Favicon-->
+        <link rel="icon" href="./images/heartofeve.ico">
+
+
+        <!--linked custom css and Js files-->
+        <link rel="preload" href="./allblogpages.css" as="style">
+        <link rel="stylesheet" href="./allblogpages.css">
+
+        <!--Fonts , icons ,CSS and JS libraries-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<!----------This page is just a customary template for every blog page that exists on this website.--------->
+<body>
+    
+    <!--Header: comprises of fixed nav and showcase carousel-->
+    <header>
+        <!--Fixed navbar to the top-->
+        <nav id="header-nav">
+
+            <section class="first-nav">
+                <!--The navigation logo to the right-->
+                <div class="navlogo">
+                    <a href="#">
+                            <img src="./images/logo5.png" id="logo" alt="website logo">
+                    </a>
+
+                </div>
+                <div class="navright">
+                    <ul class="nav-links">
+                        <li ><a href="./index.html" class="main-navlink">HOME</a></li>
+                        <li id="whoweare-main">
+                            <a href="#" class="main-navlink">WHO WE ARE</a>
+                            <ul class="hover-links" id="whoweare-sub">
+                                <li><a href="./ourhistory.html">Our History</a></li>
+                                <li><a href="./missionandvision.html">Mission and Vision</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./onlinegiving.html" class="main-navlink">ONLINE GIVING</a></li>
+                        <li><a href="./blog.html" class="main-navlink" id="on-page">BLOG</a></li>
+                        <li><a href="./contact.html" class="main-navlink">CONTACT</a></li>
+                    </ul>
+                    <!--Hidden hamburger icon-->
+                <!--<img src="./images/blackhamburgericon.png" alt="hamburger icon" onclick="hambgFunction()">-->
+                    <a class="fa fa-reorder" id="hambg-icon" onclick="hambgFunction()"></a>
+                </div>
+            </section>
+
+            <section class="second-nav">
+                <div class="nav-dropdown" id="nav-dropdown">
+                    <ul>
+                        <li>
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li id="navdrop-menu">
+                            <div class="navdrop-mainlink">
+                                <a href="#">Who We are</a>
+                                <i href="#" class="fa fa-plus" id="menu-drop" onclick="menuDrop()"></i>
+                            </div>
+                            <div class="navdrop-sublinks menu-closed" id="navdrop-sublinks">
+                                <a href="./ourhistory.html"  class="text-link">Our History</a>
+                                <a href="./missionandvision.html"  class="text-link">Mission and Vision</a>
+                            </div>
+                        </li>
+                        <li><a href="./onlinegiving.html">Online Giving</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </section>
+        </nav>
+    </header>
+
+    <section class="header-showcase">
+        <section class="inner-header-showcase">
+            <!--The image below is the large image that represents the content of the blog page of a height of about 350px-->
+            <img src="./images/blog3.jpg" alt="#">
+        </section>
+    </section>
+
+    <section class="blog-title">
+        <section class="inner-blog-title">
+            <!--This part shows the title of the blog and information of the date posted-->
+            <h2>Christ Ambassadors All Over The Earth</h2>
+            <div class="blog-details">
+                <h3>JNCBC</h3>
+                <span class="blog-date"><i class="fa fa-pencil-square-o"></i>SEP 30, 2023</span>
+            </div>
+        </section>
+    </section>
+
+    <!--This part shows the main blog content and article of the blog-->
+    <!--The h3 tags represent each subtopics-->
+    <!--The p, paragraph tags represent each details under a subtopic-->
+    <article class="blog-content">
+        <h3>BEING A GOOD REPRESENTATIVE OF JESUS.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptatem dignissimos ipsa vitae officiis ducimus quisquam. Et, repellat, fugiat hic a corporis nam saepe quibusdam assumenda, excepturi aspernatur consequuntur aperiam error ipsam sit. Aut vitae repellat vero nisi, nam id? Quisquam reprehenderit labore reiciendis unde numquam rerum, iure architecto. Et eum quia error ipsam labore rerum maiores pariatur quis architecto magnam similique voluptatibus aliquid, rem, nostrum voluptate esse! Veritatis nobis doloremque non eum necessitatibus magni autem at debitis alias nostrum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptatem dignissimos ipsa vitae officiis ducimus quisquam. Et, repellat, fugiat hic a corporis nam saepe quibusdam assumenda, excepturi aspernatur consequuntur aperiam error ipsam sit. Aut vitae repellat vero nisi, nam id? Quisquam reprehenderit labore reiciendis unde numquam rerum, iure architecto. Et eum quia error ipsam labore rerum maiores pariatur quis architecto magnam similique voluptatibus aliquid, rem, nostrum voluptate esse! Veritatis nobis doloremque non eum necessitatibus magni autem at debitis alias nostrum.</p>
+
+        <h3>BEING A GOOD REPRESENTATIVE OF JESUS.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptatem dignissimos ipsa vitae officiis ducimus quisquam. Et, repellat, fugiat hic a corporis nam saepe quibusdam assumenda, excepturi aspernatur consequuntur aperiam error ipsam sit. Aut vitae repellat vero nisi, nam id? Quisquam reprehenderit labore reiciendis unde numquam rerum, iure architecto. Et eum quia error ipsam labore rerum maiores pariatur quis architecto magnam similique voluptatibus aliquid, rem, nostrum voluptate esse! Veritatis nobis doloremque non eum necessitatibus magni autem at debitis alias nostrum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptatem dignissimos ipsa vitae officiis ducimus quisquam. Et, repellat, fugiat hic a corporis nam saepe quibusdam assumenda, excepturi aspernatur consequuntur aperiam error ipsam sit. Aut vitae repellat vero nisi, nam id? Quisquam reprehenderit labore reiciendis unde numquam rerum, iure architecto. Et eum quia error ipsam labore rerum maiores pariatur quis architecto magnam similique voluptatibus aliquid, rem, nostrum voluptate esse! Veritatis nobis doloremque non eum necessitatibus magni autem at debitis alias nostrum.</p>
+
+        <h3>BEING A GOOD REPRESENTATIVE OF JESUS.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptatem dignissimos ipsa vitae officiis ducimus quisquam. Et, repellat, fugiat hic a corporis nam saepe quibusdam assumenda, excepturi aspernatur consequuntur aperiam error ipsam sit. Aut vitae repellat vero nisi, nam id? Quisquam reprehenderit labore reiciendis unde numquam rerum, iure architecto. Et eum quia error ipsam labore rerum maiores pariatur quis architecto magnam similique voluptatibus aliquid, rem, nostrum voluptate esse! Veritatis nobis doloremque non eum necessitatibus magni autem at debitis alias nostrum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptatem dignissimos ipsa vitae officiis ducimus quisquam. Et, repellat, fugiat hic a corporis nam saepe quibusdam assumenda, excepturi aspernatur consequuntur aperiam error ipsam sit. Aut vitae repellat vero nisi, nam id? Quisquam reprehenderit labore reiciendis unde numquam rerum, iure architecto. Et eum quia error ipsam labore rerum maiores pariatur quis architecto magnam similique voluptatibus aliquid, rem, nostrum voluptate esse! Veritatis nobis doloremque non eum necessitatibus magni autem at debitis alias nostrum.</p>
+    </article>
+
+    <footer>
+        <div class="copyright">
+            <span>© Copyright JNCBC <script defer>document.write(new Date().getFullYear())</script>. All Rights Reserved.</span>
+        </div>
+        <div class="footer-links">
+            <a href="#" target="_blank" class="fa fa-facebook"></a>
+            <a href="#" target="_blank" class="fa fa-twitter"></a>
+            <a href="#" target="_blank" class="fa fa-linkedin"></a>
+            <a href="#" target="_blank" class="fa fa-youtube-play"></a>
+            <a href="#" target="_blank" class="fa fa-instagram"></a>
+            <a href="#" target="_blank" class="fa fa-whatsapp"></a>
+        </div>
+    </footer>
+
+    <section class="whatsapp-link">
+        <div class="walink-text"> Need Help? <span class="bolded">Chat With Us.</span></div>
+        <div class="walink-logo">
+            <a href="#"><img src="./images/whatsapp-logo.png" alt=""></a>
+        </div>
+    </section>
+
+
+    <script>
+
+        function hambgFunction() {
+        let hambg = document.getElementById("hambg-icon");
+        let navdrop = document.getElementById("nav-dropdown");
+
+        if (hambg.classList.contains('fa-reorder')) {
+            navdrop.style.height = "max-content";
+            hambg.style.transform = 'rotate(360deg)';
+            hambg.classList.remove('fa-reorder');
+            hambg.classList.add('fa-remove');
+        } else {
+            navdrop.style.height = "0";
+            hambg.style.transform = 'rotate(0deg)';
+            hambg.classList.remove('fa-remove');
+            hambg.classList.add('fa-reorder');
+        }
+
+        // if (navdrop.classList.contains('nav-closed')){
+        // navdrop.classList.remove('nav-closed');
+            //navdrop.classList.add('nav-opened');
+        //} else{
+            //navdrop.classList.remove('nav-opened');
+            //navdrop.classList.add('nav-closed');
+        //}
+        }
+
+        //this function changes the navbar background-color dark onscroll
+        window.onscroll = function() {navColorChange()};
+
+        function navColorChange() {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+            document.getElementById("header-nav").style.background = "#000";
+            document.getElementById("header-nav").style.borderBottom = "1px solid #fb7777";
+
+            for (let i = 0; i < 6; i++) {
+                document.getElementsByClassName("main-navlink")[i].style.color = "#fff";   
+            }
+        } else {
+            document.getElementById("header-nav").style.background = "transparent";
+            document.getElementById("header-nav").style.borderBottom = "0";
+
+            for (let i = 0; i < 6; i++) {
+                document.getElementsByClassName("main-navlink")[i].style.color = "#444";   
+            }
+        }
+        }
+
+        function menuDrop() {
+        let menudrop = document.getElementById("menu-drop");
+        let sublinks = document.getElementById("navdrop-sublinks");
+
+        if (menudrop.classList.contains('fa-plus')) {
+            menudrop.style.transform = 'rotate(360deg)';
+            menudrop.classList.remove('fa-plus');
+            menudrop.classList.add('fa-minus')
+        } else {
+            menudrop.style.transform = 'rotate(0deg)';
+            menudrop.classList.remove('fa-minus');
+            menudrop.classList.add('fa-plus')
+        }
+
+        if (sublinks.classList.contains('menu-closed')) {
+            sublinks.classList.remove('menu-closed');
+            sublinks.classList.add('menu-opened');
+        } else {
+            sublinks.classList.remove('menu-opened');
+            sublinks.classList.add('menu-closed');
+        }
+        }
+    </script>
+</body>
+</html>
